@@ -1,0 +1,40 @@
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		width: 100%;
+		clear: both;
+	}
+}
+
+@mixin section ($type) {
+	padding: 10rem 4rem;
+	.title {
+		font-size: 3.8rem;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	.desc {
+		text-align: center;
+		margin-bottom: 10rem;
+	}
+	@if $type == 'blue' {
+		background: linear-gradient(78deg, #0035FF 45.81%, #00E0FF 85.52%);
+	}
+	@if $type == 'dark' {
+		background: linear-gradient(133.63deg, #000000 32.83%, #434343 87.43%);
+	}
+	@if $type == 'team' {
+		background: url("../images/team-bg.png") 50% 0 no-repeat;
+		background-size: cover;
+	}
+	@if $type == 'world' {
+		padding: 10rem 0;
+		background: url("../images/world-bg.png") 50% 0 no-repeat;
+		background-size: auto 100%;
+	}
+	@if $type == 'default' {
+		background-color: #000;
+	}
+}
