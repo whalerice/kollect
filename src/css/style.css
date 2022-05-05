@@ -256,6 +256,22 @@ body {
           box-shadow: 0px 14px 0px #000000;
 }
 
+.btn-close {
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url('data:image/svg+xml,<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.6138 2.25091C24.1287 1.73599 24.1287 0.901128 23.6138 0.386202C23.0989 -0.128724 22.264 -0.128724 21.7491 0.386202L12 10.1353L2.25091 0.386202C1.73598 -0.128724 0.90112 -0.128724 0.386194 0.386202C-0.128731 0.901128 -0.128731 1.73599 0.386194 2.25091L10.1353 12L0.386194 21.7491C-0.128731 22.264 -0.128731 23.0989 0.386194 23.6138C0.90112 24.1287 1.73598 24.1287 2.25091 23.6138L12 13.8647L21.7491 23.6138C22.264 24.1287 23.0989 24.1287 23.6138 23.6138C24.1287 23.0989 24.1287 22.264 23.6138 21.7491L13.8647 12L23.6138 2.25091Z" fill="white"/></svg>') 0 0 no-repeat;
+  font-size: 0;
+}
+
+.btn-go-top {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border-radius: 50em;
+  z-index: 80;
+}
+
 .youtube-box {
   position: relative;
   z-index: 2;
@@ -377,6 +393,68 @@ body {
 .container {
   max-width: 144rem;
   margin: auto;
+}
+
+.sidebar {
+  width: 100%;
+  height: 100%;
+  background: #0035FF url('data:image/svg+xml,<svg width="371" height="738" viewBox="0 0 371 738" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="1.07812" y1="368.5" x2="370.078" y2="368.5" stroke="rgb(0, 136, 255)"/><line x1="1.43168" y1="368.646" x2="262.354" y2="629.569" stroke="rgb(0, 136, 255)"/><line x1="1.32813" y1="368.567" x2="320.891" y2="553.067" stroke="rgb(0, 136, 255)"/><line x1="1.20753" y1="368.517" x2="357.634" y2="464.021" stroke="rgb(0, 136, 255)"/><line x1="0.948716" y1="368.517" x2="357.376" y2="273.013" stroke="rgb(0, 136, 255)"/><line x1="0.828125" y1="368.567" x2="320.391" y2="184.067" stroke="rgb(0, 136, 255)"/><line x1="0.646447" y1="368.724" x2="261.646" y2="107.724" stroke="rgb(0, 136, 255)"/><line x1="0.578125" y1="738" x2="0.578125" stroke="rgb(0, 136, 255)"/></svg>') 4rem 50% no-repeat;
+  background-size: calc(100% - 4rem) auto;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 5rem;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.sidebar.active {
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.sidebar .btn-close {
+  position: absolute;
+  top: 5rem;
+  right: 4rem;
+}
+
+.sidebar .side-nav li {
+  margin-bottom: 10%;
+}
+
+.sidebar .side-nav li:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar .side-nav .side-nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.sidebar .side-nav .side-nav-link.active:after {
+  background-color: #fff;
+}
+
+.sidebar .side-nav .side-nav-link:after {
+  content: '';
+  display: block;
+  width: auto;
+  height: 0.5rem;
 }
 
 .main-slider {
@@ -821,6 +899,42 @@ body {
   margin-bottom: 10rem;
 }
 
+.partners h3 {
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.partners .card {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 62, 135, 0.05)), to(rgba(0, 62, 135, 0.05))), rgba(255, 255, 255, 0.09);
+  background: -o-linear-gradient(bottom, rgba(0, 62, 135, 0.05), rgba(0, 62, 135, 0.05)), rgba(255, 255, 255, 0.09);
+  background: linear-gradient(0deg, rgba(0, 62, 135, 0.05), rgba(0, 62, 135, 0.05)), rgba(255, 255, 255, 0.09);
+  border-radius: 2rem;
+  padding: 7rem 3rem;
+  margin-bottom: 3rem;
+}
+
+.partners .horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -0.9rem;
+  margin-left: -0.9rem;
+}
+
+.partners .horizontal .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 0.9rem;
+  margin-left: 0.9rem;
+  padding-bottom: 4rem;
+}
+
+.partners .horizontal .card img {
+  margin-top: -5rem;
+}
+
 .investors {
   padding: 10rem 4rem;
   background: -o-linear-gradient(12deg, #0035FF 45.81%, #00E0FF 85.52%);
@@ -837,6 +951,10 @@ body {
 .investors .desc {
   text-align: center;
   margin-bottom: 10rem;
+}
+
+.investors .desc {
+  margin-bottom: 5rem;
 }
 
 .milestone {

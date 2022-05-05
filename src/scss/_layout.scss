@@ -56,6 +56,56 @@
 	margin: auto;
 }
 
+.sidebar {
+	width: 100%;
+	height: 100%;
+	background: #0035FF url('data:image/svg+xml,<svg width="371" height="738" viewBox="0 0 371 738" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="1.07812" y1="368.5" x2="370.078" y2="368.5" stroke="rgb(0, 136, 255)"/><line x1="1.43168" y1="368.646" x2="262.354" y2="629.569" stroke="rgb(0, 136, 255)"/><line x1="1.32813" y1="368.567" x2="320.891" y2="553.067" stroke="rgb(0, 136, 255)"/><line x1="1.20753" y1="368.517" x2="357.634" y2="464.021" stroke="rgb(0, 136, 255)"/><line x1="0.948716" y1="368.517" x2="357.376" y2="273.013" stroke="rgb(0, 136, 255)"/><line x1="0.828125" y1="368.567" x2="320.391" y2="184.067" stroke="rgb(0, 136, 255)"/><line x1="0.646447" y1="368.724" x2="261.646" y2="107.724" stroke="rgb(0, 136, 255)"/><line x1="0.578125" y1="738" x2="0.578125" stroke="rgb(0, 136, 255)"/></svg>') 4rem 50% no-repeat;
+	background-size: calc(100% - 4rem) auto;
+	position: fixed;
+	top: 0;
+	right: -100%;
+	z-index: 99;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 5rem;
+	transition: 0.3s ease;
+	&.active {
+		transform: translateX(-100%);
+	}
+	.btn-close {
+		position: absolute;
+		top: 5rem;
+		right: 4rem;
+	}
+	.side-nav {
+		li {
+			margin-bottom: 10%;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.side-nav-link {
+			color: #fff;
+			text-decoration: none;
+			font-size: 2.6rem;
+			font-weight: 700;
+			//letter-spacing: -0.02em;
+			&.active {
+				&:after{
+					background-color: #fff;
+				}
+			}
+			&:after{
+				content: '';
+				display: block;
+				width: auto;
+				height: 0.5rem;
+			}
+		}
+	}
+}
+
 .main-slider {
 	width: 100%;
 	.slick-slide {
@@ -371,10 +421,38 @@
 
 .partners {
 	@include section('dark');
+	h3 {
+		font-size: 2.6rem;
+		text-align: center;
+		margin-bottom: 6rem;
+	}
+	.card {
+		background: linear-gradient(0deg, rgba(0, 62, 135, 0.05), rgba(0, 62, 135, 0.05)), rgba(255, 255, 255, 0.09);
+		border-radius: 2rem;
+		padding: 7rem 3rem;
+		margin-bottom: 3rem;
+	}
+	.horizontal {
+		display: flex;
+		margin-right: -0.9rem;
+		margin-left: -0.9rem;
+		.card {
+			flex: 1;
+			margin-right: 0.9rem;
+			margin-left: 0.9rem;
+			padding-bottom: 4rem;
+			img {
+				margin-top: -5rem;
+			}
+		}
+	}
 }
 
 .investors {
 	@include section('blue');
+	.desc {
+		margin-bottom: 5rem;
+	}
 }
 
 .milestone {
