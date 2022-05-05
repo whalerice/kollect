@@ -20,6 +20,7 @@
 	background: url("../images/logo.svg") 50% 50% no-repeat;
 	background-size: contain;
 	font-size: 0;
+	flex-shrink: 0;
 }
 
 .ico {
@@ -104,7 +105,7 @@
 
 .btn-go-top {
 	position: fixed;
-	right: 3rem;
+	right: 10%;
 	bottom: 3rem;
 	border-radius: 50rem;
 	z-index: 80;
@@ -113,6 +114,11 @@
 	font-size: 0;
 	background:#fff url('data:image/svg+xml,<svg viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.39876e-06 8L1.41 9.41L7 3.83L7 24L9 24L9 3.83L14.58 9.42L16 8L8 -6.99382e-07L1.39876e-06 8Z" fill="rgb(25, 25, 25)"/></svg>') 50% 50% no-repeat;
 	background-size: 1.6rem auto;
+	opacity: 0;
+	transition: 0.3s ease;
+	&.on {
+		opacity: 1;
+	}
 }
 
 .youtube-box {
@@ -138,7 +144,8 @@
 	&.b2 {
 		height: 20rem;
 		margin-top: 5rem;
-		margin-bottom: 10rem;
+		//margin-bottom: 10rem;
+		max-width: 59rem;
 	}
 }
 
@@ -154,5 +161,11 @@
 		bottom: -1rem;
 		left: 50%;
 		transform: translateX(-50%);
+	}
+}
+
+@media (min-width: 960px) {
+	.btn-menu {
+		display: none;
 	}
 }

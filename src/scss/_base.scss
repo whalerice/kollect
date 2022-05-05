@@ -58,6 +58,7 @@ html {
 	width: 100%;
 	min-height: 100%;
 	font-size: 10px;
+	scroll-behavior:smooth;
 }
 
 body {
@@ -72,4 +73,10 @@ body {
 	background-color: #191919;
 	color: #fff;
 	position: relative;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
 }

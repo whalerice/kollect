@@ -1,4 +1,7 @@
 (() => {
+	const goTop = document.querySelector('#goTop');
+	let yOffset;
+
 	$('.main-slider').slick({
 		infinite: true,
 		dots: true,
@@ -36,10 +39,9 @@
 		else $('#sidebar').removeClass('active')
 	}
 
-	const goTop = document.querySelector('#goTop');
-	let yOffset = window.pageYOffset;
+
 	function goTopPos() {
-		if (yOffset > 100) {
+		if (yOffset > 300) {
 			goTop.classList.add('on');
 		}
 		else {
@@ -62,6 +64,7 @@
 		navToggle(false)
 	});
 
+
 	// setTimeout(()=>{
 	// 	let iconSkipForward = document.querySelector('.bodymovinanim');
 	//
@@ -80,10 +83,13 @@
 	// },100)
 
 
-	console.log('bb')
 
+	window.addEventListener("load", () => {
 
-	window.addEventListener("load", () => {});
-
+	});
+	window.addEventListener("scroll", () => {
+		yOffset	= window.pageYOffset;
+		goTopPos();
+	});
 
 })();

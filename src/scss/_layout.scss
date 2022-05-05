@@ -5,13 +5,39 @@
 	top: 3.4rem;
 	left: 0;
 	right: 0;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding-right: 2.2rem;
-	padding-left: 2.2rem;
-	//padding: 3rem 2rem 3rem 3rem;
 	z-index: 99;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-right: 2.2rem;
+		padding-left: 2.2rem;
+	}
+	.rt {
+		display: inline-flex;
+		align-items: center;
+	}
+	.nav {
+		width: 0;
+		opacity: 0;
+		transition: 0.3s ease;
+		.nav-list {
+			display: inline-flex;
+			align-items: center;
+			li {
+				margin-right: 1rem;
+				margin-left: 1rem;
+				a {
+					font-weight: 700;
+					padding: 0.5rem;
+					font-size: 1.6rem;
+					text-decoration: none;
+					color: #fff;
+
+				}
+			}
+		}
+	}
 }
 
 .footer {
@@ -205,16 +231,18 @@
 
 .world {
 	@include section('world');
+	@include txt;
 	padding-bottom: 30rem;
 	background-color: #333;
 	.title-group {
 		padding-right: 2.7rem;
 		padding-left: 2.7rem;
+		max-width: 80rem;
+		margin: auto;
 	}
-	.s-title {
-		text-align: center;
-		font-size: 2rem;
-		margin-bottom: 3rem;
+	.world-box {
+		max-width: 91.5rem;
+		margin: auto;
 	}
 	.lottie3 {
 		text-align: center;
@@ -244,35 +272,11 @@
 		}
 		@include clearfix;
 	}
-	//.img-group {
-	//	text-align: center;
-	//	img {
-	//		display: inline-block;
-	//		position: relative;
-	//		z-index: 0;
-	//	}
-	//	.woc {
-	//		width: 100%;
-	//		max-width: 35rem;
-	//		z-index: 1;
-	//	}
-	//	.explore{
-	//		width: 20%;
-	//		left: -7rem;
-	//		top: -10rem;
-	//	}
-	//	.expand{
-	//		width: 8%;
-	//		top: 3rem;
-	//	}
-	//	.earn{
-	//		width: 16%;
-	//		right: -7rem;
-	//		top: -13rem;
-	//	}
-	//}
+
 	.gameplay {
 		padding-top: 5rem;
+		max-width: 119rem;
+		margin: auto;
 		.gameplay-title-box {
 			padding: 5rem 4rem;
 			position: relative;
@@ -313,6 +317,8 @@
 	.in-game-box {
 		padding-right: 4rem;
 		padding-left: 4rem;
+		max-width: 113rem;
+		margin: auto;
 		.top {
 			margin-bottom: 8rem;
 			label {
@@ -323,6 +329,9 @@
 				font-size: 2rem;
 				margin-bottom: 1.9rem;
 			}
+		}
+		.youtube-box {
+			margin-bottom: 10rem;
 		}
 		.list {
 			.ico {
@@ -370,6 +379,7 @@
 
 .utillity {
 	@include section('blue');
+	@include txt;
 	.card {
 		background-color: #191919;
 		border-radius: 2rem;
@@ -419,6 +429,7 @@
 
 .team {
 	@include section('team');
+	@include txt;
 	.team-item {
 		max-width: 34rem;
 		margin: 0 auto 8rem auto;
@@ -466,6 +477,7 @@
 
 .partners {
 	@include section('dark');
+	@include txt;
 	h3 {
 		font-size: 2.6rem;
 		text-align: center;
@@ -499,6 +511,7 @@
 
 .investors {
 	@include section('blue');
+	@include txt;
 	text-align: center;
 	.desc {
 		margin-bottom: 5rem;
@@ -507,6 +520,7 @@
 
 .milestone {
 	@include section('default');
+	@include txt;
 }
 
 .road-map {
@@ -566,6 +580,7 @@
 
 .community {
 	@include section('blue');
+	@include txt;
 	.counter-box {
 		text-align: center;
 		margin-bottom: 7rem;
@@ -681,8 +696,58 @@
 }
 
 @media (min-width: 960px) {
-	.container {
-		max-width: 144rem;
+	.header {
+		.nav {
+			width: auto;
+			opacity: 1;
+		}
+	}
+	.world {
+		.text-group {
+			.explore {
+				width: 16rem;
+			}
+			.expand {
+				width: 14rem;
+				margin-top: 0
+			}
+			.earn {
+				width: 15rem;
+			}
+		}
+		.gameplay {
+			.cards-box {
+				display: none;
+			}
+		}
+		.in-game-box {
+			.top {
+				label {
+					font-size: 1.6rem;
+				}
+				h3 {
+					font-size: 3.8em;
+				}
+				p {
+					font-size: 1.6rem;
+				}
+
+			}
+			.youtube-box {
+				margin-bottom: 20rem;
+			}
+			.list {
+				display: inline-flex;
+				align-items: center;
+				li {
+					margin-bottom: 0;
+					margin-right: 6rem;
+				}
+			}
+			&:last-of-type {
+				margin-left: 46%;
+			}
+		}
 	}
 	.partners {
 		h3 {
@@ -725,6 +790,7 @@
 			margin-left: 0.5rem;
 		}
 	}
+
 	.footer {
 		padding-top: 7rem;
 		padding-bottom: 7rem;
@@ -766,6 +832,25 @@
 	}
 	.btn-go-top {
 		bottom: 28rem;
+	}
+}
+
+@media (min-width: 1400px) {
+	.header {
+		.nav {
+			.nav-list {
+				li {
+					margin-right: 2rem;
+					margin-left: 2rem;
+				}
+			}
+		}
+	}
+	.main-slider {
+		.slide-1, .slide-2 {
+			background-size: cover;
+		}
+
 	}
 }
 
