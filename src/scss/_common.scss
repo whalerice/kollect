@@ -1,7 +1,5 @@
-
-
 .title {
-  font-size: 1.5rem; // 14px * 1.5 = 21px
+  font-size: 1.5rem;
 }
 .img {
   width: 100%;
@@ -23,6 +21,7 @@
 	background-size: contain;
 	font-size: 0;
 }
+
 .ico {
 	display: inline-block;
 	vertical-align: middle;
@@ -82,6 +81,7 @@
 	font-weight: 700;
 	font-size: 1.8rem;
 	letter-spacing: -0.05rem;
+	max-width: 30rem;
 }
 
 .btn-nft {
@@ -104,11 +104,15 @@
 
 .btn-go-top {
 	position: fixed;
-	right: 0;
-	bottom: 0;
-	background-color: #fff;
-	border-radius: 50em;
+	right: 3rem;
+	bottom: 3rem;
+	border-radius: 50rem;
 	z-index: 80;
+	width: 5.6rem;
+	height: 5.6rem;
+	font-size: 0;
+	background:#fff url('data:image/svg+xml,<svg viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.39876e-06 8L1.41 9.41L7 3.83L7 24L9 24L9 3.83L14.58 9.42L16 8L8 -6.99382e-07L1.39876e-06 8Z" fill="rgb(25, 25, 25)"/></svg>') 50% 50% no-repeat;
+	background-size: 1.6rem auto;
 }
 
 .youtube-box {

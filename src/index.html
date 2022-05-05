@@ -28,7 +28,7 @@
 	<div class="main-slider">
 		<div class="slide-1">
 			<div class="img">
-				<div id="lottie"></div>
+				<div id="lottie" class="lottie"></div>
 			</div>
 			<div class="text-group">
 				<hgroup>
@@ -39,7 +39,7 @@
 		</div>
 		<div class="slide-2">
 			<div class="img">
-				<div id="lottie2"></div>
+				<div id="lottie2" class="lottie"></div>
 			</div>
 			<div class="text-group">
 				<hgroup>
@@ -57,8 +57,10 @@
 		<h2 class="title">Warp to the Metaverse!</h2>
 		<p class="desc">In the World of Cards, NFTs could awaken their "HashForce" with mystical power source $WOC. Through Cross-Chain Portals all NFTs can join the World of Cards to awaken their true powers. Unleash the hidden power of NFTs!</p>
 	</div>
-	<div class="img-group">
+	<div class="lottie3">
 		<img src="/images/woc-logo.png" class="woc" alt="world of cards">
+	</div>
+	<div class="text-group">
 		<img src="./images/text-explore.svg" class="explore" alt="explore" data-aos="fade-right">
 		<img src="./images/text-expand.svg"  class="expand" alt="expand" data-aos="fade-up-left">
 		<img src="./images/text-earn.svg" class="earn" alt="earn" data-aos="fade-up">
@@ -221,9 +223,9 @@
 </section>
 
 <section class="partners">
+	<h2 class="title">Partners</h2>
+	<p class="desc">Introducing our official partners.</p>
 	<div class="container">
-		<h2 class="title">Partners</h2>
-		<p class="desc">Introducing our official partners.</p>
 		<div class="card">
 			<h3>Exchanges</h3>
 			<img src="./images/partners/partners-1.png" alt="partners">
@@ -235,11 +237,17 @@
 		<div class="horizontal">
 			<div class="card">
 				<h3>Guilds</h3>
-				<img src="./images/partners/partners-3.png" alt="partners">
+				<picture>
+					<source media="(min-width: 960px)" srcset="./images/partners/partners-3-pc.png">
+					<img src="./images/partners/partners-3.png" alt="partners">
+				</picture>
 			</div>
 			<div class="card">
 				<h3>IPs</h3>
-				<img src="./images/partners/partners-4.png" alt="partners">
+				<picture>
+					<source media="(min-width: 960px)" srcset="./images/partners/partners-4-pc.png">
+					<img src="./images/partners/partners-4.png" class="mobile" alt="partners">
+				</picture>
 			</div>
 		</div>
 	</div>
@@ -250,7 +258,10 @@
 		<h2 class="title">Investors</h2>
 		<p class="desc">We are backed by some of the world's most influential investors. </p>
 	</div>
-	<img src="./images/investors/brands.png" alt="brands">
+	<picture>
+		<source media="(min-width: 960px)" srcset="./images/investors/brands-pc.png">
+		<img src="./images/investors/brands.png" alt="brands">
+	</picture>
 </section>
 <section class="milestone">
 	<div class="container">
@@ -408,8 +419,8 @@
 				<li><a href="#" target="_blank"><i class="ico ico-telegram"></i></a></li>
 				<li><a href="#" target="_blank"><i class="ico ico-youtube"></i></a></li>
 			</ul>
+			<p class="copy">&copy; Kollect.  All Rights Reserved.</p>
 		</div>
-		<p class="copy">&copy; Kollect.  All Rights Reserved.</p>
 	</div>
 </footer>
 <button type="button" class="btn-go-top" id="goTop">go to top</button>
