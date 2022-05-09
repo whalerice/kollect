@@ -22,6 +22,7 @@
 		opacity: 0;
 		transition: 0.3s ease;
 		.nav-list {
+			visibility: hidden;
 			display: inline-flex;
 			align-items: center;
 			li {
@@ -519,62 +520,80 @@
 }
 
 .milestone {
+	position: relative;
+	overflow-x: hidden;
 	@include section('default');
 	@include txt;
 }
 
 .road-map {
-	padding: 10rem 0;
+	position: relative;
+	padding: 10rem 4rem;
 	overflow-x: hidden;
-	.ag-timeline_title-box {
-		margin-bottom: 5rem;
-		.title {
-			display: inline-block;
-			font-weight: 700;
-			font-size: 3.8rem;
-			color: #fff;
-			margin-bottom: 3rem;
-			position: relative;
-			sup {
-				font-size: 2rem;
-				position: absolute;
-				top: -1.5rem;
-				right: -4.5rem;
-			}
+	//@include section('default');
+	@include txt;
+	.title-group {
+		text-align: center;
+	}
+	.title {
+		display: inline-block;
+		position: relative;
+		sup {
+			font-size: 2rem;
+			position: absolute;
+			top: -1.5rem;
+			right: -4.5rem;
 		}
 	}
-	.ag-timeline-card_point {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border: 0;
-		width: 5rem;
-		height: 5rem;
-		line-height: 1.4;
-		background-color: #333;
-		font-family: 'Noto Sans', sans-serif;
-		font-size: 1.9rem;
-		font-weight: 700;
-		color: #555;
-	}
-	.ag-timeline_line {
-		width: 0.4rem;
-		background-color: #333;
-	}
-	.ag-timeline_line-progress {
-		background-color: #0088FF;
-	}
-	.js-ag-active {
-		.ag-timeline-card_point {
-			color: #fff;
-			background: linear-gradient(46.23deg, #0035FF 45.81%, #00E0FF 85.52%);
-		}
-	}
-
-	.ag-timeline-card_item {
-		height: 40rem;
-		background-color: #00E0FF;
-	}
+	//.ag-timeline_title-box {
+	//	margin-bottom: 5rem;
+	//	.title {
+	//		display: inline-block;
+	//		font-weight: 700;
+	//		font-size: 3.8rem;
+	//		color: #fff;
+	//		margin-bottom: 3rem;
+	//		position: relative;
+	//		sup {
+	//			font-size: 2rem;
+	//			position: absolute;
+	//			top: -1.5rem;
+	//			right: -4.5rem;
+	//		}
+	//	}
+	//}
+	//.ag-timeline-card_point {
+	//	display: flex;
+	//	align-items: center;
+	//	justify-content: center;
+	//	border: 0;
+	//	width: 5rem;
+	//	height: 5rem;
+	//	line-height: 1.4;
+	//	background-color: #333;
+	//	font-family: 'Noto Sans', sans-serif;
+	//	font-size: 1.9rem;
+	//	font-weight: 700;
+	//	color: #555;
+	//}
+	//.ag-timeline_line {
+	//	width: 0.4rem;
+	//	background-color: #333;
+	//}
+	//.ag-timeline_line-progress {
+	//	background-color: #0088FF;
+	//}
+	//.js-ag-active {
+	//	.ag-timeline-card_point {
+	//		color: #fff;
+	//		background: linear-gradient(46.23deg, #0035FF 45.81%, #00E0FF 85.52%);
+	//	}
+	//}
+	//
+	//.ag-timeline-card_item {
+	//	height: 40rem;
+	//	background-color: #00E0FF;
+	//}
 }
 
 
@@ -700,6 +719,9 @@
 		.nav {
 			width: auto;
 			opacity: 1;
+			.nav-list {
+				visibility: visible;
+			}
 		}
 	}
 	.world {
@@ -839,6 +861,7 @@
 	.header {
 		.nav {
 			.nav-list {
+
 				li {
 					margin-right: 2rem;
 					margin-left: 2rem;

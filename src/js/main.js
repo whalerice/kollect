@@ -6,12 +6,14 @@
 		infinite: true,
 		dots: true,
 		arrows: false,
+		autoplay: false,
+		// autoplaySpeed: 5000,
 	});
 
 	let ani = lottie.loadAnimation({
 		container: document.getElementById('lottie'),
 		renderer: 'svg',
-		loop: false,
+		loop: true,
 		autoplay: false,
 		path: 'https://assets3.lottiefiles.com/packages/lf20_0uqjzch2.json'
 		// path: '/images/slider/data1_in.json'
@@ -20,10 +22,11 @@
 	let ani2 = lottie.loadAnimation({
 		container: document.getElementById('lottie2'),
 		renderer: 'svg',
-		loop: false,
+		loop: true,
 		autoplay: false,
 		path: 'https://assets5.lottiefiles.com/packages/lf20_e6pyivz1.json'
 		// path: '/images/slider/data2_in.json'
+		// path: '/images/slider/data.json'
 	});
 
 	ani.play();
@@ -48,8 +51,10 @@
 			goTop.classList.remove('on')
 		}
 	}
+	const sideNavLink = $('.side-nav-link');
 
 	goTop.addEventListener('click', () => {
+		sideNavLink.removeClass('active');
 		window.scroll({
 			behavior: "smooth",
 			left:0,
@@ -63,6 +68,15 @@
 	$('.btn-close').click( function() {
 		navToggle(false)
 	});
+
+	for (let i = 0; sideNavLink.length > i; i++) {
+		sideNavLink.eq(i).click(function(e) {
+			navToggle(false);
+			sideNavLink.removeClass('active');
+			$(e.currentTarget).addClass('active')
+			// $('.side-nav-link').eq(i).addClass('active')
+		})
+	}
 
 
 	// setTimeout(()=>{
