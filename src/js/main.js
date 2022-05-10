@@ -17,6 +17,7 @@
 		autoplay: false,
 		path: 'https://assets3.lottiefiles.com/packages/lf20_0uqjzch2.json'
 		// path: '/images/slider/data1_in.json'
+		// path: '/images/slider/data_2.json'
 	});
 
 	let ani2 = lottie.loadAnimation({
@@ -26,7 +27,7 @@
 		autoplay: false,
 		path: 'https://assets5.lottiefiles.com/packages/lf20_e6pyivz1.json'
 		// path: '/images/slider/data2_in.json'
-		// path: '/images/slider/data.json'
+		// path: '/images/slider/data_1.json'
 	});
 
 	ani.play();
@@ -78,6 +79,25 @@
 		})
 	}
 
+	const counterUp = window.counterUp.default
+
+	const callback = entries => {
+		entries.forEach( entry => {
+			const el = entry.target
+			if ( entry.isIntersecting && ! el.classList.contains( 'is-visible' ) ) {
+				counterUp( el, {
+					duration: 2000,
+					delay: 16,
+				} )
+				el.classList.add( 'is-visible' )
+			}
+		} )
+	}
+
+	const IO = new IntersectionObserver( callback, { threshold: 1 } )
+
+	const el = document.querySelector( '.counter' )
+	IO.observe( el )
 
 	// setTimeout(()=>{
 	// 	let iconSkipForward = document.querySelector('.bodymovinanim');

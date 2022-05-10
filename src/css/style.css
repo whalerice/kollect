@@ -1212,9 +1212,13 @@ body {
   margin-bottom: 10rem;
 }
 
-.team .team-item {
+.team .team-list {
   max-width: 34rem;
-  margin: 0 auto 8rem auto;
+  margin: 0 auto;
+}
+
+.team .team-item {
+  margin-bottom: 8rem;
   text-align: center;
 }
 
@@ -1249,6 +1253,10 @@ body {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.4;
+}
+
+.team .team-item button {
+  display: none;
 }
 
 .team .team-item:first-of-type img {
@@ -1596,6 +1604,73 @@ body {
   }
   .header .nav .nav-list {
     visibility: visible;
+  }
+  .team {
+    text-align: center;
+  }
+  .team .team-list {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: initial;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 6rem;
+    padding-bottom: 10rem;
+  }
+  .team .team-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    margin-bottom: 0;
+    min-height: 18rem;
+  }
+  .team .team-item img {
+    margin-left: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .team .team-item .box {
+    display: none;
+    margin-left: 0;
+  }
+  .team .team-item button {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    background: -o-linear-gradient(214.25deg, #0035FF 13.05%, #00E0FF 89.45%);
+    background: linear-gradient(235.75deg, #0035FF 13.05%, #00E0FF 89.45%);
+    -webkit-box-shadow: 0 0.4rem 3.1rem rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0.4rem 3.1rem rgba(0, 0, 0, 0.15);
+    border-radius: 7rem;
+    padding: 1.6rem;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #fff;
+    margin-top: 1.3rem;
+  }
+  .team .team-item:first-of-type img {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
   .world .text-group .explore {
     width: 16rem;

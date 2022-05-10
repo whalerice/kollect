@@ -431,9 +431,12 @@
 .team {
 	@include section('team');
 	@include txt;
-	.team-item {
+	.team-list {
 		max-width: 34rem;
-		margin: 0 auto 8rem auto;
+		margin: 0 auto;
+	}
+	.team-item {
+		margin-bottom: 8rem;
 		text-align: center;
 		img {
 			width: 15rem;
@@ -464,6 +467,9 @@
 					line-height: 1.4;
 				}
 			}
+		}
+		button {
+			display: none;
 		}
 		&:first-of-type {
 			img {
@@ -724,6 +730,64 @@
 			}
 		}
 	}
+	.team {
+		text-align: center;
+		.team-list {
+			display: inline-flex;
+			align-items: center;
+			max-width: initial;
+			justify-content: space-between;
+			padding-top: 6rem;
+			padding-bottom: 10rem;
+		}
+		.team-item {
+			display: flex;
+			flex-flow: column;
+			justify-content: space-between;
+			margin-right: 3rem;
+			margin-left: 3rem;
+			margin-bottom: 0;
+			min-height: 18rem;
+			img {
+				margin-left: 0;
+				flex-shrink: 0;
+			}
+			.box {
+				display: none;
+				//max-width: initial;
+				//width: 20rem;
+				//text-align: left;
+				//padding: 2.4rem;
+				//border-radius: 0.4rem;
+				//-webkit-box-shadow: 0px 4px 8px rgb(0 0 0 / 35%);
+				//box-shadow: 0px 4px 8px rgb(0 0 0 / 35%);
+				//background: rgba(255, 255, 255, 0.1);
+				//-webkit-backdrop-filter: blur(10px);
+				//backdrop-filter: blur(10px);
+				//max-width: 22rem;
+				margin-left: 0;
+				//margin-top: 0;
+			}
+			button {
+				display: inline-flex;
+				justify-content: center;
+				text-align: center;
+				background: linear-gradient(235.75deg, #0035FF 13.05%, #00E0FF 89.45%);
+				box-shadow: 0 0.4rem 3.1rem rgba(0, 0, 0, 0.15);
+				border-radius: 7rem;
+				padding: 1.6rem;
+				width: 100%;
+				font-weight: 700;
+				font-size: 1.6rem;
+				color: #fff;
+				margin-top: 1.3rem;
+			}
+
+			&:first-of-type img {
+				transform: none;
+			}
+		}
+	}
 	.world {
 		.text-group {
 			.explore {
@@ -812,6 +876,7 @@
 			margin-left: 0.5rem;
 		}
 	}
+
 
 	.footer {
 		padding-top: 7rem;
