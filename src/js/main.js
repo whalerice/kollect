@@ -16,7 +16,6 @@
 		loop: true,
 		autoplay: false,
 		path: 'https://assets3.lottiefiles.com/packages/lf20_0uqjzch2.json'
-		// path: '/images/slider/data1_in.json'
 		// path: '/images/slider/data_2.json'
 	});
 
@@ -26,8 +25,7 @@
 		loop: true,
 		autoplay: false,
 		path: 'https://assets5.lottiefiles.com/packages/lf20_e6pyivz1.json'
-		// path: '/images/slider/data2_in.json'
-		// path: '/images/slider/data_1.json'
+		// path: '/images/slider/data_3.json'
 	});
 
 	ani.play();
@@ -78,26 +76,43 @@
 			// $('.side-nav-link').eq(i).addClass('active')
 		})
 	}
+	const teamItem = document.querySelectorAll('.team-item');
+	const teamItemBox = document.querySelectorAll('.team-item .box');
+	const teamItemButton = document.querySelectorAll('.team-item button');
 
-	const counterUp = window.counterUp.default
+	for (let i = 0; teamItem.length > i; i++) {
+		teamItemButton[i].addEventListener('click', (e) =>{
+			teamItemBox.forEach(e =>{
+				e.classList.remove('active');
+			})
+			teamItemBox[i].classList.add('active')
+		})
+	}
 
+	const counterUp = window.counterUp.default;
 	const callback = entries => {
 		entries.forEach( entry => {
 			const el = entry.target
-			if ( entry.isIntersecting && ! el.classList.contains( 'is-visible' ) ) {
+			if ( entry.isIntersecting && ! el.classList.contains('is-visible' )) {
 				counterUp( el, {
 					duration: 2000,
 					delay: 16,
 				} )
-				el.classList.add( 'is-visible' )
+				el.classList.add('is-visible')
 			}
 		} )
 	}
 
-	const IO = new IntersectionObserver( callback, { threshold: 1 } )
+	const IO = new IntersectionObserver(callback, { threshold: 1 });
 
-	const el = document.querySelector( '.counter' )
-	IO.observe( el )
+	const el = document.querySelector('#counter');
+	const el1 = document.querySelector('#counter-1');
+	const el2 = document.querySelector('#counter-2');
+	const el3 = document.querySelector('#counter-3');
+	IO.observe(el);
+	IO.observe(el1)
+	IO.observe(el2)
+	IO.observe(el3)
 
 	// setTimeout(()=>{
 	// 	let iconSkipForward = document.querySelector('.bodymovinanim');

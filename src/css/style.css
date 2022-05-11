@@ -457,6 +457,13 @@ body {
   background-position: 50% 50%;
 }
 
+.social-discord2 {
+  background-image: url('data:image/svg+xml,<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.7772 5.25221C17.514 4.67262 16.1595 4.2456 14.7432 4.00103C14.7174 3.99631 14.6916 4.0081 14.6784 4.03169C14.5042 4.34154 14.3112 4.74575 14.1761 5.06346C12.6528 4.83541 11.1373 4.83541 9.64525 5.06346C9.51009 4.73869 9.31012 4.34154 9.13513 4.03169C9.12184 4.00889 9.09608 3.99709 9.07029 4.00103C7.6548 4.24482 6.30025 4.67183 5.0363 5.25221C5.02536 5.25693 5.01598 5.2648 5.00976 5.27501C2.44046 9.11349 1.73662 12.8576 2.0819 16.5553C2.08346 16.5734 2.09362 16.5907 2.10768 16.6017C3.80283 17.8466 5.44487 18.6024 7.05642 19.1033C7.08221 19.1112 7.10954 19.1017 7.12595 19.0805C7.50717 18.5599 7.84698 18.011 8.13834 17.4337C8.15554 17.3999 8.13912 17.3598 8.10398 17.3465C7.56497 17.142 7.05173 16.8927 6.55803 16.6096C6.51898 16.5868 6.51585 16.5309 6.55178 16.5042C6.65567 16.4263 6.75959 16.3453 6.85879 16.2636C6.87674 16.2486 6.90175 16.2455 6.92286 16.2549C10.1663 17.7357 13.6777 17.7357 16.8828 16.2549C16.9039 16.2447 16.9289 16.2478 16.9477 16.2628C17.0469 16.3446 17.1508 16.4263 17.2555 16.5042C17.2914 16.5309 17.289 16.5868 17.25 16.6096C16.7563 16.8982 16.243 17.142 15.7033 17.3457C15.6681 17.359 15.6525 17.3999 15.6697 17.4337C15.9673 18.0102 16.3071 18.5591 16.6813 19.0797C16.6969 19.1017 16.725 19.1112 16.7508 19.1033C18.3702 18.6024 20.0122 17.8466 21.7074 16.6017C21.7222 16.5907 21.7316 16.5742 21.7332 16.5561C22.1464 12.2812 21.041 8.56773 18.8029 5.2758C18.7975 5.2648 18.7881 5.25693 18.7772 5.25221ZM8.6227 14.3038C7.6462 14.3038 6.8416 13.4073 6.8416 12.3063C6.8416 11.2053 7.6306 10.3089 8.6227 10.3089C9.62258 10.3089 10.4194 11.2132 10.4038 12.3063C10.4038 13.4073 9.61476 14.3038 8.6227 14.3038ZM15.208 14.3038C14.2315 14.3038 13.4269 13.4073 13.4269 12.3063C13.4269 11.2053 14.2159 10.3089 15.208 10.3089C16.2079 10.3089 17.0047 11.2132 16.9891 12.3063C16.9891 13.4073 16.2079 14.3038 15.208 14.3038Z" fill="rgb(114, 137, 218)"/></svg> ');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
 .social-medium {
   background-image: url('data:image/svg+xml,<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8879 11.5001C12.8879 15.0899 10.0028 18 6.44407 18C2.88532 18 0 15.0893 0 11.5001C0 7.91097 2.8851 5 6.44407 5C10.003 5 12.8879 7.91031 12.8879 11.5001Z" fill="black"/><path d="M19.957 11.5002C19.957 14.8792 18.5145 17.6196 16.735 17.6196C14.9555 17.6196 13.5129 14.8792 13.5129 11.5002C13.5129 8.12119 14.9553 5.38086 16.7348 5.38086C18.5142 5.38086 19.9568 8.12031 19.9568 11.5002" fill="black"/><path d="M22.8484 11.4996C22.8484 14.5263 22.3412 16.9815 21.7153 16.9815C21.0893 16.9815 20.5823 14.527 20.5823 11.4996C20.5823 8.47212 21.0895 6.01758 21.7153 6.01758C22.341 6.01758 22.8484 8.4719 22.8484 11.4996Z" fill="black"/></svg>');
   background-repeat: no-repeat;
@@ -904,6 +911,7 @@ body {
   padding: 10rem 0;
   background: url("../images/world-bg.png") 50% 0 no-repeat;
   background-size: auto 100%;
+  overflow-x: hidden;
   padding-bottom: 30rem;
   background-color: #333;
 }
@@ -1467,6 +1475,64 @@ body {
   font-size: 20vw;
 }
 
+.community .social-counter-box {
+  display: none;
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+.community .social-counter-list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.community .social-counter-list li {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 50em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 23rem;
+}
+
+.community .social-counter-list li:nth-child(2) {
+  margin-right: 6rem;
+  margin-left: 6rem;
+}
+
+.community .social-counter-list .ico {
+  width: 7rem;
+  height: 7rem;
+  background-color: #191919;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+}
+
+.community .social-counter-list .ico .social {
+  width: 4rem;
+  height: 4rem;
+}
+
+.community .social-counter-list .social-counter {
+  color: #191919;
+  font-size: 4rem;
+  font-weight: 900;
+  margin-left: 2.2rem;
+}
+
 .community .social-item {
   margin-bottom: 8rem;
   padding-left: 3.4rem;
@@ -1637,15 +1703,24 @@ body {
     margin-left: 3rem;
     margin-bottom: 0;
     min-height: 18rem;
+    text-align: center;
   }
   .team .team-item img {
     margin-left: 0;
     -ms-flex-negative: 0;
         flex-shrink: 0;
+    display: block;
+    margin: auto;
   }
   .team .team-item .box {
     display: none;
     margin-left: 0;
+  }
+  .team .team-item .box.active {
+    display: block;
+  }
+  .team .team-item .box.active + button {
+    display: none;
   }
   .team .team-item button {
     display: -webkit-inline-box;
@@ -1655,17 +1730,24 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
-    background: -o-linear-gradient(214.25deg, #0035FF 13.05%, #00E0FF 89.45%);
-    background: linear-gradient(235.75deg, #0035FF 13.05%, #00E0FF 89.45%);
-    -webkit-box-shadow: 0 0.4rem 3.1rem rgba(0, 0, 0, 0.15);
-            box-shadow: 0 0.4rem 3.1rem rgba(0, 0, 0, 0.15);
     border-radius: 7rem;
-    padding: 1.6rem;
     width: 100%;
+    margin-top: 1.3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .team .team-item button > span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1.6rem 3rem;
     font-weight: 700;
     font-size: 1.6rem;
+    border-radius: 7rem;
     color: #fff;
-    margin-top: 1.3rem;
+    background: -o-linear-gradient(214.25deg, #0035FF 13.05%, #00E0FF 89.45%);
+    background: linear-gradient(235.75deg, #0035FF 13.05%, #00E0FF 89.45%);
   }
   .team .team-item:first-of-type img {
     -webkit-transform: none;
@@ -1735,15 +1817,19 @@ body {
   .partners .container .horizontal picture {
     margin-top: 12rem;
   }
+  .community .counter-box {
+    display: none;
+  }
+  .community .social-counter-box {
+    display: block;
+  }
   .community .social-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   .community .social-item {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    width: 33.33%;
     margin-bottom: 0;
   }
   .community .other-social-list {
@@ -1754,9 +1840,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
-    -webkit-transform: translate(60%, -8.5rem);
-        -ms-transform: translate(60%, -8.5rem);
-            transform: translate(60%, -8.5rem);
+    -webkit-transform: translate(32vw, -8.5rem);
+        -ms-transform: translate(32vw, -8.5rem);
+            transform: translate(32vw, -8.5rem);
   }
   .community .other-social-item {
     margin-right: 0.5rem;
@@ -1822,6 +1908,19 @@ body {
   }
   .main-slider .slide-1, .main-slider .slide-2 {
     background-size: cover;
+  }
+  .community .other-social-list {
+    -webkit-transform: translate(44rem, -8.5rem);
+        -ms-transform: translate(44rem, -8.5rem);
+            transform: translate(44rem, -8.5rem);
+  }
+}
+
+@media (min-width: 1600px) {
+  .community .other-social-list {
+    -webkit-transform: translate(48rem, -8.5rem);
+        -ms-transform: translate(48rem, -8.5rem);
+            transform: translate(48rem, -8.5rem);
   }
 }
 
