@@ -125,8 +125,12 @@
 .youtube-box {
 	position: relative;
 	z-index: 2;
-	width: 100%;
-	height: 25.7rem;
+	width: 100vw;
+	height: ratioH(41.4rem, 25.7rem, 100vw);
+	max-width: 119.8rem;
+	max-height: ratioH(41.4rem, 25.7rem, 119.8rem);
+	//(100vw * 25.7rem) / 41.4rem;
+	//height: calc();
 	background-color: #000;
 	filter: drop-shadow(0px 14px 10px rgba(0, 0, 0, 0.35));
 	.btn-play {
@@ -150,23 +154,107 @@
 	}
 }
 
-.cards-box {
+.cards-box-m {
 	position: relative;
 	z-index: 0;
-	margin-top: -5rem;
-	.card2 {
-		margin-top: -3rem;
+	text-align: center;
+	margin-top: -10%;
+	.card-group {
+		display: inline-flex;
+		img {
+			width: 33.33%;
+			margin: 1rem;
+			//box-shadow: 0 0 0 10rem rgba(0,0,0,0.5);
+			filter: drop-shadow(0px 1.4rem 1rem rgba(0, 0, 0, 0.35));
+		}
 	}
+}
+.cards-box-pc {
+	display: none;
+	max-width: 144rem;
+	margin: auto;
+	position: relative;
 	.btn-nft {
 		position: absolute;
-		bottom: -1rem;
-		left: 50%;
-		transform: translateX(-50%);
+		left: calc(50% - 7rem);
+		right: 0;
+		top: calc(50% + 38rem);
+	}
+	.card-group {
+		width: 27rem;
+		&.vertical {
+			img {
+				margin: 4.5rem 0;
+			}
+		}
+		&.horizontal {
+			display: flex;
+			width: 100%;
+			height: 27rem;
+			img {
+				width: initial;
+				height: 100%;
+				margin: 0 4.5rem;
+			}
+		}
+		&:nth-of-type(1) {
+			margin-left: 29rem;
+			margin-top: -9%;
+		}
+		&:nth-of-type(2) {
+			margin-left: 60rem;
+			margin-top: -41rem;
+		}
+		&:nth-of-type(3) {
+			margin-left: -51rem;
+			margin-top: 28rem;
+		}
+		&:nth-of-type(4) {
+			margin-left: 89rem;
+			margin-top: -40.5rem;
+		}
+	}
+	img {
+		width: 100%;
+		filter: drop-shadow(0px 1.4rem 1rem rgba(0, 0, 0, 0.35));
+		&.opacity {
+			opacity: 0.8;
+		}
+
+	}
+	.groups {
+		position: absolute;
+		&.groups-1 {
+			top: 22rem;
+			left: -45rem;
+			width: 68rem;
+		}
+		&.groups-2 {
+			top: 20rem;
+			right: -40rem;
+			width: 119rem;
+		}
+		&.groups-3 {
+			bottom: -74rem;
+			left: -96rem;
+			width: 119rem;
+		}
+		&.groups-4 {
+			bottom: -66rem;
+			right: -48rem;
+			width: 68rem;
+		}
 	}
 }
 
 @media (min-width: 960px) {
 	.btn-menu {
 		display: none;
+	}
+	.cards-box-m {
+		display: none;
+	}
+	.cards-box-pc {
+		display: block;
 	}
 }

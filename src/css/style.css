@@ -563,8 +563,10 @@ body {
 .youtube-box {
   position: relative;
   z-index: 2;
-  width: 100%;
-  height: 25.7rem;
+  width: 100vw;
+  height: 62.07729vw;
+  max-width: 119.8rem;
+  max-height: 74.3686rem;
   background-color: #000;
   -webkit-filter: drop-shadow(0px 14px 10px rgba(0, 0, 0, 0.35));
           filter: drop-shadow(0px 14px 10px rgba(0, 0, 0, 0.35));
@@ -594,28 +596,129 @@ body {
   max-width: 59rem;
 }
 
-.cards-box {
+.cards-box-m {
   position: relative;
   z-index: 0;
-  margin-top: -5rem;
+  text-align: center;
+  margin-top: -10%;
 }
 
-.cards-box .card2 {
-  margin-top: -3rem;
+.cards-box-m .card-group {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
-.cards-box .btn-nft {
+.cards-box-m .card-group img {
+  width: 33.33%;
+  margin: 1rem;
+  -webkit-filter: drop-shadow(0px 1.4rem 1rem rgba(0, 0, 0, 0.35));
+          filter: drop-shadow(0px 1.4rem 1rem rgba(0, 0, 0, 0.35));
+}
+
+.cards-box-pc {
+  display: none;
+  max-width: 144rem;
+  margin: auto;
+  position: relative;
+}
+
+.cards-box-pc .btn-nft {
   position: absolute;
-  bottom: -1rem;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: calc(50% - 7rem);
+  right: 0;
+  top: calc(50% + 38rem);
+}
+
+.cards-box-pc .card-group {
+  width: 27rem;
+}
+
+.cards-box-pc .card-group.vertical img {
+  margin: 4.5rem 0;
+}
+
+.cards-box-pc .card-group.horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 27rem;
+}
+
+.cards-box-pc .card-group.horizontal img {
+  width: initial;
+  height: 100%;
+  margin: 0 4.5rem;
+}
+
+.cards-box-pc .card-group:nth-of-type(1) {
+  margin-left: 29rem;
+  margin-top: -9%;
+}
+
+.cards-box-pc .card-group:nth-of-type(2) {
+  margin-left: 60rem;
+  margin-top: -41rem;
+}
+
+.cards-box-pc .card-group:nth-of-type(3) {
+  margin-left: -51rem;
+  margin-top: 28rem;
+}
+
+.cards-box-pc .card-group:nth-of-type(4) {
+  margin-left: 89rem;
+  margin-top: -40.5rem;
+}
+
+.cards-box-pc img {
+  width: 100%;
+  -webkit-filter: drop-shadow(0px 1.4rem 1rem rgba(0, 0, 0, 0.35));
+          filter: drop-shadow(0px 1.4rem 1rem rgba(0, 0, 0, 0.35));
+}
+
+.cards-box-pc img.opacity {
+  opacity: 0.8;
+}
+
+.cards-box-pc .groups {
+  position: absolute;
+}
+
+.cards-box-pc .groups.groups-1 {
+  top: 22rem;
+  left: -45rem;
+  width: 68rem;
+}
+
+.cards-box-pc .groups.groups-2 {
+  top: 20rem;
+  right: -40rem;
+  width: 119rem;
+}
+
+.cards-box-pc .groups.groups-3 {
+  bottom: -74rem;
+  left: -96rem;
+  width: 119rem;
+}
+
+.cards-box-pc .groups.groups-4 {
+  bottom: -66rem;
+  right: -48rem;
+  width: 68rem;
 }
 
 @media (min-width: 960px) {
   .btn-menu {
     display: none;
+  }
+  .cards-box-m {
+    display: none;
+  }
+  .cards-box-pc {
+    display: block;
   }
 }
 
@@ -808,15 +911,19 @@ body {
 }
 
 .main-slider .slick-slide .img {
+  height: 50rem;
+  padding-top: 5rem;
   position: relative;
   z-index: 1;
-  padding-top: 5rem;
-  text-align: center;
 }
 
-.main-slider .slick-slide .img .lottie {
-  display: inline-block;
+.main-slider .slick-slide .img #lottie {
   max-width: 50rem;
+}
+
+.main-slider .slick-slide .img #lottie2 {
+  width: 60rem;
+  margin-top: 5rem;
 }
 
 .main-slider .slick-slide .text-group {
@@ -877,40 +984,14 @@ body {
 
 .main-slider .slick-dots {
   position: absolute;
-  top: calc(58% + 1rem);
-  left: 4rem;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-right: -0.2rem;
-  margin-left: -0.2rem;
-}
-
-.main-slider .slick-dots li {
-  margin-right: 0.2rem;
-  margin-left: 0.2rem;
-}
-
-.main-slider .slick-dots li button {
-  display: block;
-  padding: 0;
-  width: 3rem;
-  height: 1rem;
-  background-color: #fff;
-  opacity: 0.3;
-  font-size: 0;
-  border-radius: 1rem;
-}
-
-.main-slider .slick-dots li.slick-active button {
-  opacity: 1;
+  top: 0;
 }
 
 .world {
   padding: 10rem 4rem;
   padding: 10rem 0;
   background: url("../images/world-bg.png") 50% 0 no-repeat;
-  background-size: auto 100%;
+  background-size: auto 60%;
   overflow-x: hidden;
   padding-bottom: 30rem;
   background-color: #333;
@@ -1754,6 +1835,9 @@ body {
         -ms-transform: none;
             transform: none;
   }
+  .world {
+    background-color: #191919;
+  }
   .world .text-group .explore {
     width: 16rem;
   }
@@ -1766,6 +1850,11 @@ body {
   }
   .world .gameplay .cards-box {
     display: none;
+  }
+  .world .gameplay .gameplay-title-box img {
+    width: 24rem;
+    top: -5rem;
+    right: 0;
   }
   .world .in-game-box .top label {
     font-size: 1.6rem;
@@ -1847,6 +1936,24 @@ body {
   .community .other-social-item {
     margin-right: 0.5rem;
     margin-left: 0.5rem;
+  }
+  .utillity {
+    padding-top: 20rem;
+    padding-bottom: 24rem;
+  }
+  .utillity .card-box {
+    max-width: 94rem;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .utillity .card-box .card {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-bottom: 0;
+    width: 50%;
+    height: 100%;
   }
   .footer {
     padding-top: 7rem;

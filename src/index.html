@@ -85,7 +85,7 @@
 		<div class="gameplay-title-box">
 			<h3 data-aos="fade-up">Gameplay</h3>
 			<p data-aos="fade-up">Check out our game trailer!</p>
-			<img src="./images/character_1.png" alt="character" data-aos="zoom-in">
+			<img src="./images/character_1.png" alt="character" data-aos="fade-up" data-aos-duration="1500">
 		</div>
 
 		<div class="youtube-box" data-aos="fade-up">
@@ -94,32 +94,54 @@
 				<i class="ico ico-play-arrow"></i>
 			</button>
 		</div>
-		<div class="cards-box">
-			<img src="./images/m-cards-1.png" alt="cards" data-aos="fade-up">
-			<img src="./images/m-cards-2.png" alt="cards" class="card2" data-aos="fade-up">
-			<button type="button" class="btn-nft" data-aos="fade-up">NFT</button>
+		<div class="cards-box-m">
+			<div class="card-group">
+				<img src="./images/card/card-m-01.png" alt="card" data-aos="fade-right">
+				<img src="./images/card/card-m-02.png" alt="card" data-aos="fade-up">
+				<img src="./images/card/card-m-03.png" alt="card" data-aos="fade-left">
+			</div>
+			<div class="card-group">
+				<img src="./images/card/card-m-04.png" alt="card" data-aos="fade-right">
+				<img src="./images/card/card-m-05.png" alt="card" data-aos="fade-up">
+				<img src="./images/card/card-m-06.png" alt="card" data-aos="fade-left">
+			</div>
+<!--			<img src="./images/m-cards-1.png" alt="cards" data-aos="fade-up">-->
+<!--			<img src="./images/m-cards-2.png" alt="cards" class="card2" data-aos="fade-up">-->
+<!--			<button type="button" class="btn-nft" data-aos="fade-up">NFT</button>-->
 		</div>
 	</div>
 	<div class="cards-box-pc">
-		<img src="./images/card/card-group-1.png" alt="" width="30%">
-		<img src="./images/card/card-group-2.png" alt=""  width="30%">
-		<img src="./images/card/card-group-3.png" alt=""  width="30%">
-		<img src="./images/card/card-group-4.png" alt=""  width="30%">
-		<img src="./images/card/card-a-1.png" alt="" width="20%">
-		<img src="./images/card/card-a-2.png" alt="" width="20%">
-		<img src="./images/card/card-a-3.png" alt="" width="20%">
-		<img src="./images/card/card-b-1.png" alt="" width="20%">
-		<img src="./images/card/card-b-2.png" alt="" width="20%">
-		<img src="./images/card/card-b-3.png" alt="" width="20%">
-		<img src="./images/card/card-c-1.png" alt="" width="20%">
-		<img src="./images/card/card-c-2.png" alt="" width="20%">
-		<img src="./images/card/card-c-3.png" alt="" width="20%">
-		<img src="./images/card/card-d-1.png" alt="" width="20%">
-		<button type="button" class="btn-nft" data-aos="fade-up">NFT</button>
+		<img src="./images/card/card-group-1.png" alt="group" class="groups groups-1">
+		<img src="./images/card/card-group-2.png" alt="group" class="groups groups-2">
+		<img src="./images/card/card-group-3.png" alt="group" class="groups groups-3">
+		<img src="./images/card/card-group-4.png" alt="group" class="groups groups-4">
+
+		<div class="card-group vertical">
+			<img src="./images/card/card-a-1.png" class="pc-card" alt="card" class="opacity"/>
+			<img src="./images/card/card-a-2.png" class="pc-card" alt="card" />
+			<img src="./images/card/card-a-3.png" class="pc-card" alt="card" />
+		</div>
+		<div class="card-group horizontal">
+			<img src="./images/card/card-b-1.png" class="pc-card" alt="card" />
+			<img src="./images/card/card-b-2.png" class="pc-card" alt=card" />
+			<img src="./images/card/card-b-3.png" class="pc-card" alt="card" />
+		</div>
+
+		<div class="card-group horizontal">
+			<img src="./images/card/card-c-1.png" class="pc-card" alt="card" />
+			<img src="./images/card/card-c-2.png" class="pc-card" alt="card" />
+			<img src="./images/card/card-c-3.png" class="pc-card" alt="card" />
+		</div>
+
+		<div class="card-group vertical">
+			<img src="./images/card/card-d-1.png" class="pc-card" alt="card" />
+		</div>
+
+		<button type="button" class="btn-nft">NFT</button>
 	</div>
 	<div class="nfts">
 		<h4 class="s-title" data-aos="fade-up">Mateverse playground for all NFTs</h4>
-		<h2 class="title" data-aos="fade-up">Join the World of Cards. Awaken your NFTs potential!</h2>
+		<h2 class="title" data-aos="fade-up">Join the World of Cards. <br> Awaken your NFTs potential!</h2>
 		<p class="desc" data-aos="fade-up">The first P2E game brought by Kollect</p>
 		<button type="button" class="btn-more" data-aos="fade-up">READ MORE</button>
 	</div>
@@ -180,32 +202,33 @@
 			The First #P2E Game Connected to Kollect's Ecosystem NFT Card Battle Game <br>
 			All #NFTs Published by Kollect.cards Can Be Integrated</p>
 
-		<div class="card">
-			<h3  data-aos="fade-up">Game Pass</h3>
-			<div class="ico-box">
-				<i class="round"></i>
-				<img src="./images/utillity/intersect.png" class="img-1" alt="Intersect">
-				<img src="./images/utillity/intersect_pass.png" class="img-2" alt="Intersect pass">
+		<div class="card-box">
+			<div class="card">
+				<h3  data-aos="fade-up">Game Pass</h3>
+				<div class="ico-box">
+					<i class="round"></i>
+					<img src="./images/utillity/intersect.png" class="img-1" alt="Intersect">
+					<img src="./images/utillity/intersect_pass.png" class="img-2" alt="Intersect pass">
+				</div>
+				<p  data-aos="fade-up">Integrate your NFT into the World of Cards!</p>
 			</div>
-			<p  data-aos="fade-up">Integrate your NFT into the World of Cards!</p>
-		</div>
-		<div class="card">
-			<h3 data-aos="fade-up">Staking System</h3>
-			<div class="ico-box">
-				<i class="round"></i>
-				<img src="./images/utillity/mark.png" class="img-3" alt="mark">
+			<div class="card">
+				<h3 data-aos="fade-up">Staking System</h3>
+				<div class="ico-box">
+					<i class="round"></i>
+					<img src="./images/utillity/mark.png" class="img-3" alt="mark">
+				</div>
+				<p data-aos="fade-up">Stake KOLs for various perks in game!</p>
 			</div>
-			<p data-aos="fade-up">Stake KOLs for various perks in game!</p>
 		</div>
 	</div>
 </section>
-
 <section id="team" class="team">
 	<div class="container">
 		<h2 class="title" data-aos="fade-up">Kollect Team</h2>
 		<p class="desc" data-aos="fade-up">Meet our team members!</p>
 		<ul class="team-list">
-			<li class="team-item" data-aos="fade-down">
+			<li class="team-item" data-aos="fade-down" data-aos-duration="900">
 				<img src="./images/team/ceo.png" alt="ceo">
 				<div class="box" data-aos="flip-right">
 					<h4>CEO Vincenzo</h4>
@@ -220,7 +243,7 @@
 					<span>CTO Harry</span>
 				</button>
 			</li>
-			<li class="team-item" data-aos="fade-down">
+			<li class="team-item" data-aos="fade-down" data-aos-duration="1100">
 				<img src="./images/team/cto.png" alt="cto">
 				<div class="box" data-aos="flip-right">
 					<h4>CTO Harry</h4>
@@ -236,7 +259,7 @@
 					<span>CTO Harry</span>
 				</button>
 			</li>
-			<li class="team-item" data-aos="fade-down">
+			<li class="team-item" data-aos="fade-down"  data-aos-duration="1300">
 				<img src="./images/team/cso.png" alt="cso">
 				<div class="box" data-aos="flip-right">
 					<h4>CSO Ethan</h4>
@@ -250,7 +273,7 @@
 					<span>CTO Harry</span>
 				</button>
 			</li>
-			<li class="team-item" data-aos="fade-down">
+			<li class="team-item" data-aos="fade-down" data-aos-duration="1500">
 				<img src="./images/team/cmo.png" alt="cmo">
 				<div class="box" data-aos="flip-right">
 					<h4>CMO Joy</h4>
@@ -266,7 +289,6 @@
 		</ul>
 	</div>
 </section>
-
 <section id="partners" class="partners">
 	<h2 class="title" data-aos="fade-up">Partners</h2>
 	<p class="desc" data-aos="fade-up">Introducing our official partners.</p>
@@ -297,7 +319,6 @@
 		</div>
 	</div>
 </section>
-
 <section id="investors" class="investors">
 	<div class="container">
 		<h2 class="title" data-aos="fade-up">Investors</h2>

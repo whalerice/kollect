@@ -37,6 +37,12 @@
 		//margin-bottom: 10rem;
 	}
 }
+
+@function ratioH($w, $h, $nW) {
+	//$result =
+	$result: ($nW * $h) / $w;
+	@return $result;
+}
 //
 //%title {
 //	font-size: 3.8rem;
@@ -77,8 +83,8 @@
 	}
 	@if $type == 'world' {
 		padding: 10rem 0;
-		background: url("../images/world-bg.png") 50% 0 no-repeat;
-		background-size: auto 100%;
+		background:url("../images/world-bg.png") 50% 0 no-repeat;
+		background-size: auto 60%;
 	}
 	@if $type == 'default' {
 		background-color: #000;
