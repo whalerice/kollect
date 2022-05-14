@@ -26,6 +26,9 @@
 	}
 }
 @mixin txt-pc () {
+	.s-title {
+		font-size: 3.8rem;
+	}
 	.title {
 		font-size: 7rem;
 		//font-weight: 700;
@@ -33,6 +36,7 @@
 		//margin-bottom: 2rem;
 	}
 	.desc {
+		font-size: 2rem;
 		//text-align: center;
 		//margin-bottom: 10rem;
 	}

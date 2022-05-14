@@ -1,6 +1,10 @@
 (() => {
 	const goTop = document.querySelector('#goTop');
 	let yOffset;
+	let winW;
+	let utillityimgPos1;
+	let utillityimgPos2;
+	let utillityimgPos3;
 
 	$('.main-slider').slick({
 		infinite: true,
@@ -15,8 +19,8 @@
 		renderer: 'svg',
 		loop: true,
 		autoplay: false,
-		// path: 'https://assets3.lottiefiles.com/packages/lf20_0uqjzch2.json'
-		path: '/images/slider/data_2.json'
+		path: 'https://assets3.lottiefiles.com/packages/lf20_0uqjzch2.json'
+		// path: '/images/slider/data_2.json'
 	});
 
 	let ani2 = lottie.loadAnimation({
@@ -24,8 +28,8 @@
 		renderer: 'svg',
 		loop: true,
 		autoplay: false,
-		// path: 'https://assets5.lottiefiles.com/packages/lf20_e6pyivz1.json'
-		path: '/images/slider/data_3.json'
+		path: 'https://assets5.lottiefiles.com/packages/lf20_e6pyivz1.json'
+		// path: '/images/slider/data_3.json'
 	});
 
 	ani.play();
@@ -87,6 +91,9 @@
 			})
 			teamItemBox[i].classList.add('active')
 		})
+		teamItemBox[i].addEventListener('click', (e) =>{
+			teamItemBox[i].classList.remove('active');
+		})
 	}
 
 	const counterUp = window.counterUp.default;
@@ -105,11 +112,9 @@
 
 	const IO = new IntersectionObserver(callback, { threshold: 1 });
 
-	const el = document.querySelector('#counter');
 	const el1 = document.querySelector('#counter-1');
 	const el2 = document.querySelector('#counter-2');
 	const el3 = document.querySelector('#counter-3');
-	IO.observe(el);
 	IO.observe(el1)
 	IO.observe(el2)
 	IO.observe(el3)
@@ -132,13 +137,50 @@
 	// },100)
 
 
-
 	window.addEventListener("load", () => {
-
+		winW = window.innerWidth;
+		utillityimgPos1 = $('#utillityimgPos1').offset().top;
+		utillityimgPos2 = $('#utillityimgPos2').offset().top;
+		utillityimgPos3 = $('#utillityimgPos3').offset().top;
 	});
 	window.addEventListener("scroll", () => {
 		yOffset	= window.pageYOffset;
+		winW = window.innerWidth;
+		utillityimgPos1 = $('#utillityimgPos1').offset().top;
+		utillityimgPos2 = $('#utillityimgPos2').offset().top;
+		utillityimgPos3 = $('#utillityimgPos3').offset().top;
+
 		goTopPos();
+
+		if (winW < 959) {
+			if (yOffset > utillityimgPos1) {
+				$('.utillity .img-1').addClass('on');
+				$('.utillity .img-2').addClass('on');
+			}
+			else {
+				$('.utillity .img-1').removeClass('on');
+				$('.utillity .img-2').removeClass('on');
+			}
+			if (yOffset > utillityimgPos2) {
+				$('.utillity .ico-round').addClass('on');
+			}
+			else {
+				$('.utillity .ico-round').removeClass('on');
+			}
+		}
+		else {
+			if (yOffset > utillityimgPos3) {
+				$('.utillity .img-1').addClass('on');
+				$('.utillity .img-2').addClass('on');
+				$('.utillity .ico-round').addClass('on');
+			}
+			else {
+				$('.utillity .img-1').removeClass('on');
+				$('.utillity .img-2').removeClass('on');
+				$('.utillity .ico-round').removeClass('on');
+			}
+		}
+	//	ico-round
 	});
 
 })();
