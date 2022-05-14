@@ -17,7 +17,9 @@
 				if (width >= 100) {
 					clearInterval(id);
 					i = 0;
+					// ani.playSegments([0, 24]);
 					ani.play();
+					// ani.playSegments([30,100]);
 				} else {
 					width++;
 					elem.style.width = width + "%";
@@ -31,7 +33,7 @@
 		dots: true,
 		arrows: false,
 		autoplay: true,
-		autoplaySpeed: 5000,
+		autoplaySpeed: 10000,
 	});
 
 	let ani = lottie.loadAnimation({
@@ -50,8 +52,12 @@
 		// path: 'https://assets5.lottiefiles.com/packages/lf20_e6pyivz1.json'
 		path: '/images/slider/data_3.json'
 	});
+	// ani.setDirection(-1)
+	// ani2.setDirection(-1)
 
 	$('.main-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		// ani.goToAndPlay(1, true)
+		// ani.goToAndStop(5, true)
 		currentSlide === 0 ? ani2.play() : ani2.stop();
 		currentSlide === 1 ? move() : ani.stop();
 	});
@@ -236,7 +242,9 @@
 		}
 	}
 
-
+	window.addEventListener('resize', () =>{
+		lottie.resize();
+	})
 	window.addEventListener("load", () => {
 		document.body.classList.remove('before-load');
 		move();

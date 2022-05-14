@@ -1099,6 +1099,8 @@ body.before-load .loading {
 .main-slider .slick-slide .img {
   width: 100%;
   height: 50rem;
+  position: relative;
+  z-index: 5;
 }
 
 .main-slider .slick-slide .text-group {
@@ -1961,6 +1963,10 @@ body.before-load .loading {
 
 .community .other-social-item {
   width: calc(50% - 2rem);
+}
+
+.community .other-social-item a {
+  text-decoration: none;
   color: #555;
   font-weight: 700;
   display: -webkit-inline-box;
@@ -2090,10 +2096,6 @@ body.before-load .loading {
   .main-slider .slide-2 .img {
     padding-top: 0;
     height: auto;
-  }
-  .main-slider .slide-2 .img .lottie {
-    position: relative;
-    z-index: 5;
   }
   .main-slider .slide-2 .text-group {
     min-height: initial;

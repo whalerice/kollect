@@ -157,6 +157,8 @@
 		.img {
 			width: 100%;
 			height: 50rem;
+			position: relative;
+			z-index: 5;
 		}
 		.text-group {
 			position: relative;
@@ -778,11 +780,14 @@
 	}
 	.other-social-item {
 		width: calc(50% - 2rem);
-		color: #555;
-		font-weight: 700;
-		display: inline-flex;
-		align-items: center;
-		margin: 1.5rem 1rem;
+		a{
+			text-decoration: none;
+			color: #555;
+			font-weight: 700;
+			display: inline-flex;
+			align-items: center;
+			margin: 1.5rem 1rem;
+		}
 		.social {
 			margin-right: 1rem;
 			flex-shrink: 0;
@@ -939,10 +944,6 @@
 			.img {
 				padding-top: 0;
 				height: auto;
-				.lottie {
-					position: relative;
-					z-index: 5;
-				}
 			}
 			.text-group {
 				min-height: initial;
