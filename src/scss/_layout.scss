@@ -136,6 +136,16 @@
 	}
 }
 
+.main {
+	position: relative;
+	.scroll-down {
+		position: absolute;
+		bottom: 5rem;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
 .main-slider {
 	width: 100%;
 	.slick-slide {
@@ -187,6 +197,7 @@
 			padding-top: 3rem;
 			.lottie {
 				margin: auto;
+				height: 100%;
 			}
 		}
 	}
@@ -417,18 +428,14 @@
 				position: absolute;
 				transition: 0.3s ease;
 				&.img-1 {
-					transform: translate3d(-35px, 35px, 0);
-					bottom: -2.1rem;
-					left: -2.1rem;
-					//bottom: -5.5rem;
-					//left: -5.5rem;
+					transform: translate3d(-37px, 37px, 0);
+					bottom: -3rem;
+					left: -3rem;
 				}
 				&.img-2 {
-					transform: translate3d(30px, -30px, 0);
-					top: -1.5rem;
-					right: -1.5rem;
-					//top: -4.5rem;
-					//right: -4.5rem;
+					transform: translate3d(39px, -39px, 0);
+					top: -2.5rem;
+					right: -2.5rem;
 				}
 				&.on {
 					transform: translateZ(0);
@@ -861,6 +868,87 @@
 			}
 		}
 	}
+	.main-slider {
+		.slick-slide {
+			height: 100vh;
+		}
+		.slide-1  {
+			.img {
+				position: relative;
+				height: 100%;
+				max-width: 144rem;
+				margin: auto;
+				.lottie {
+					width: 60rem;
+					margin: inherit;
+					position: absolute;
+					top: 42%;
+					right: 0;
+					z-index: 5;
+					transform: translateY(-50%);
+				}
+			}
+			.text-group {
+				width: 100%;
+				position: absolute;
+				z-index: 2;
+				top: calc(50%  + 5rem);
+				left: 50%;
+				max-width: 144rem;
+				transform: translateX(-50%);
+				.title {
+					br {
+						display: none;
+					}
+				}
+				.desc {
+					max-width: 40rem;
+				}
+			}
+			.ani-line {
+				position: absolute;
+				top: calc(50% + 0.5rem);
+				left: 0;
+				width: 72%;
+				height: 1rem;
+				background-color: #fff;
+				z-index: 2;
+				border-radius: 0 1rem 1rem 0;
+				font-size: 0;
+			}
+		}
+		.slide-2 {
+			.container {
+				height: 100%;
+				display: flex;
+				align-items: center;
+				flex-direction: row-reverse;
+			}
+			.img {
+				padding-top: 0;
+				height: auto;
+			}
+			.text-group {
+				min-height: initial;
+				padding: 0 0 0 4rem;
+				transform: translateY(80px);
+			}
+		}
+
+		.slick-dots {
+			bottom: 15rem;
+			left: 50%;
+			transform: translateX(-50%);
+			li {
+				margin-right: 0.4rem;
+				margin-left: 0.4rem;
+				button {
+					width: 3.8rem;
+					height: 1.5rem;
+				}
+			}
+		}
+	}
 	.team {
 		min-height: 100vh;
 		text-align: center;
@@ -871,7 +959,6 @@
 			margin-top: 20rem;
 		}
 		.team-item {
-			//background-color: #00E0FF;
 			width: 25%;
 			position: relative;
 			margin-bottom: 0;
@@ -963,70 +1050,10 @@
 				}
 			}
 		}
-		//.team-list {
-		//	display: inline-flex;
-		//	align-items: flex-start;
-		//	max-width: initial;
-		//	justify-content: space-between;
-		//	padding-top: 6rem;
-		//}
-		//.team-item {
-		//	//width: 23rem;
-		//	display: inline-flex;
-		//	flex-flow: column;
-		//	justify-content: space-between;
-		//	padding-right: 5rem;
-		//	margin-left: 5rem;
-		//	//margin-right: 5rem;
-		//	//margin-left: 5rem;
-		//	//margin-right: 3rem;
-		//	//margin-left: 3rem;
-		//	margin-bottom: 0;
-		//	//min-height: 18rem;
-		//	text-align: center;
-		//	position: relative;
-		//	img {
-		//		//margin-left: 0;
-		//		flex-shrink: 0;
-		//		display: block;
-		//		margin: auto;
-		//	}
-		//	.box {
-		//		//display: none;
-		//		position: absolute;
-		//		width: 21rem;
-		//		top: 36%;
-		//
-		//		//top: 80%;
-		//		//max-width: initial;
-		//		//width: 20rem;
-		//		//text-align: left;
-		//		//padding: 2.4rem;
-		//		//border-radius: 0.4rem;
-		//		//-webkit-box-shadow: 0px 4px 8px rgb(0 0 0 / 35%);
-		//		//box-shadow: 0px 4px 8px rgb(0 0 0 / 35%);
-		//		//background: rgba(255, 255, 255, 0.1);
-		//		//-webkit-backdrop-filter: blur(10px);
-		//		//backdrop-filter: blur(10px);
-		//		//max-width: 22rem;
-		//		margin-left: 0;
-		//		margin-top: 0;
-		//		transition: 0.3s ease;
-		//		&.active {
-		//			display: block;
-		//			//top: 50%;
-		//			& + button {
-		//				visibility: hidden;
-		//			}
-		//		}
-		//	}
-
-		//
-
-		//}
 	}
 	.world {
 		@include txt-pc;
+		padding-top: 20rem;
 		background-color: #191919;
 		.nfts {
 			@include txt-pc;
@@ -1045,13 +1072,14 @@
 			}
 			.expand {
 				width: 14rem;
-				margin-top: 0
+				margin-top: 50%
 			}
 			.earn {
 				width: 15rem;
 			}
 		}
 		.gameplay {
+			margin-top: -25rem;
 			.cards-box {
 				display: none;
 			}
@@ -1231,6 +1259,15 @@
 }
 
 @media (min-width: 1200px) {
+	.main-slider {
+		.slide-2 {
+			.img {
+				.lottie{
+					width: 80rem;
+				}
+			}
+		}
+	}
 	.world {
 		.gameplay {
 			.gameplay-title-box {
@@ -1245,8 +1282,6 @@
 					width: 36rem;
 					transform: translate3d(150px, -135px, 0);
 				}
-				//3.8
-				//1.6
 			}
 		}
 	}

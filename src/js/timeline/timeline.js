@@ -15,9 +15,7 @@
 		const timelineItemList = $(".timeline-item-list");
 		const timelinePoint = $(".timeline-circle-box");
 		let outerHeight = $(window).outerHeight();
-		console.log(outerHeight);
 		let height = $(window).height();
-		console.log(height);
 		let initial = -1;
 		let fullScroll = false;
 

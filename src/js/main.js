@@ -19,8 +19,8 @@
 		renderer: 'svg',
 		loop: true,
 		autoplay: false,
-		path: 'https://assets3.lottiefiles.com/packages/lf20_0uqjzch2.json'
-		// path: '/images/slider/data_2.json'
+		// path: 'https://assets3.lottiefiles.com/packages/lf20_0uqjzch2.json'
+		path: '/images/slider/data_2.json'
 	});
 
 	let ani2 = lottie.loadAnimation({
@@ -28,8 +28,8 @@
 		renderer: 'svg',
 		loop: true,
 		autoplay: false,
-		path: 'https://assets5.lottiefiles.com/packages/lf20_e6pyivz1.json'
-		// path: '/images/slider/data_3.json'
+		// path: 'https://assets5.lottiefiles.com/packages/lf20_e6pyivz1.json'
+		path: '/images/slider/data_3.json'
 	});
 
 	ani.play();
