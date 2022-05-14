@@ -7,16 +7,39 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>KOLLECT.CARDS</title>
 
-	<link rel="stylesheet" href="./js/slick/slick.css">
-	<link rel="stylesheet" href="./js/aos/aos.css">
-	<link rel="stylesheet" href="./css/style.css">
+	<!-- twitter -->
+	<meta name="twitter:card" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:description" content="" />
+	<meta name="twitter:image" content="./images/og-image.png" /><!--	site address-->
+	<!-- Facebook -->
+	<meta property="og:title" content="Creative digital expert, quagga inc." />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="./images/og-image.png" /><!--	site address-->
+	<meta property="og:description" content="" />
+
+	<meta name="robots" content="index, follow" />
+	<meta name="copyright" content="© Kollect." />
+	<meta name="description" content="" />
+	<meta name="keywords" content=""/>
+
+	<link rel="image_src" href="./images/og-image.png" /> <!--	site address-->
 
 	<link rel="apple-touch-icon" sizes="152x152" href="./images/apple-icon-152x152.png">
 	<link rel="icon" type="image/png" sizes="192x192"  href="./images/android-icon-192x192.png">
 	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="./js/slick/slick.css">
+	<link rel="stylesheet" href="./js/aos/aos.css">
+	<link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="before-load">
+<div class="loading">
+	<svg class="loading-circle">
+		<circle cx="50%" cy="50%" r="25"></circle>
+	</svg>
+</div>
 <header class="header">
 	<div class="container">
 		<a href="/" class="logo">Kollect</a>
@@ -50,7 +73,9 @@
 				</hgroup>
 				<p class="desc">Kollect is the metaverse playground that brings life and adds value to your NFT collections. All NFTs are unique, and you are the author of your NFT's legend. Through Kollect, NFTs are given infinite paths to realize their true potential. To be a hero, a villain, or even a fool, you decide!</p>
 			</div>
-			<div class="ani-line">line</div>
+			<div class="ani-line">
+				<i class="ico" id="main-line"></i>
+			</div>
 		</div>
 		<div class="slide-2">
 			<div class="container">
@@ -67,7 +92,10 @@
 			</div>
 		</div>
 	</div>
-	<span class="scroll-down"></span>
+	<div class="scroll-down">
+		<span>scroll down</span>
+		<i class="ico-scroll-down"></i>
+	</div>
 </section>
 <section id="world" class="world">
 	<div class="title-group">
@@ -92,8 +120,9 @@
 			<img src="./images/character_1.png" alt="character" data-aos="fade-up" data-aos-duration="1500">
 		</div>
 
-		<div class="youtube-box" data-aos="fade-up">
-			<div id="player"></div>
+		<div class="youtube-box" data-aos="fade-up" id="youtubeBoxA">
+			<div id="player_a"></div>
+			<div class="youtube-backdrop"></div>
 			<button type="button" class="btn-play">
 				<i class="ico ico-play-arrow"></i>
 			</button>
@@ -112,33 +141,33 @@
 		</div>
 	</div>
 	<div class="cards-box-pc">
-		<img src="./images/card/card-group-1.png" alt="group" class="groups groups-1">
-		<img src="./images/card/card-group-2.png" alt="group" class="groups groups-2">
-		<img src="./images/card/card-group-3.png" alt="group" class="groups groups-3">
-		<img src="./images/card/card-group-4.png" alt="group" class="groups groups-4">
+		<img src="./images/card/card-group-1.png" alt="group" class="groups groups-1" id="groups1">
+		<img src="./images/card/card-group-2.png" alt="group" class="groups groups-2" id="groups2">
+		<img src="./images/card/card-group-3.png" alt="group" class="groups groups-3" id="groups3">
+		<img src="./images/card/card-group-4.png" alt="group" class="groups groups-4" id="groups4">
 
 		<div class="card-group vertical">
-			<img src="./images/card/card-a-1.png" class="pc-card" alt="card" class="opacity"/>
-			<img src="./images/card/card-a-2.png" class="pc-card" alt="card" />
-			<img src="./images/card/card-a-3.png" class="pc-card" alt="card" />
+			<img src="./images/card/card-a-1.png" class="pc-card opacity" alt="card" id="cardA1"/>
+			<img src="./images/card/card-a-2.png" class="pc-card" alt="card" id="cardA2"/>
+			<img src="./images/card/card-a-3.png" class="pc-card" alt="card" id="cardA3"/>
 		</div>
-		<div class="card-group horizontal">
-			<img src="./images/card/card-b-1.png" class="pc-card" alt="card" />
-			<img src="./images/card/card-b-2.png" class="pc-card" alt=card" />
-			<img src="./images/card/card-b-3.png" class="pc-card" alt="card" />
+		<div class="card-group horizontal" id="scrollPoint-1">
+			<img src="./images/card/card-b-1.png" class="pc-card" alt="card" id="cardB1"/>
+			<img src="./images/card/card-b-2.png" class="pc-card" alt=card" id="cardB2"/>
+			<img src="./images/card/card-b-3.png" class="pc-card" alt="card" id="cardB3"/>
 		</div>
 
 		<div class="card-group horizontal">
-			<img src="./images/card/card-c-1.png" class="pc-card" alt="card" />
-			<img src="./images/card/card-c-2.png" class="pc-card" alt="card" />
-			<img src="./images/card/card-c-3.png" class="pc-card" alt="card" />
+			<img src="./images/card/card-c-1.png" class="pc-card" alt="card" id="cardC1"/>
+			<img src="./images/card/card-c-2.png" class="pc-card" alt="card" id="cardC2"/>
+			<img src="./images/card/card-c-3.png" class="pc-card" alt="card" id="cardC3"/>
 		</div>
 
 		<div class="card-group vertical">
-			<img src="./images/card/card-d-1.png" class="pc-card" alt="card" />
+			<img src="./images/card/card-d-1.png" class="pc-card" alt="card" id="cardD1"/>
 		</div>
 
-		<button type="button" class="btn-nft">NFT</button>
+		<button type="button" class="btn-nft" id="nftSymbol">NFT</button>
 	</div>
 	<div class="nfts">
 		<h4 class="s-title" data-aos="fade-up">Mateverse playground for all NFTs</h4>
@@ -167,8 +196,9 @@
 					<span data-aos="fade-right">Stages</span>
 				</li>
 			</ul>
-			<div class="youtube-box b2" data-aos="fade-up">
-				<div id="player2"></div>
+			<div class="youtube-box b2" data-aos="fade-up" id="youtubeBoxB">
+				<div id="player_b"></div>
+				<div class="youtube-backdrop"></div>
 				<button type="button" class="btn-play">
 					<i class="ico ico-play-arrow"></i>
 				</button>
@@ -509,9 +539,6 @@
 		<h2 class="title" data-aos="fade-up">Join our Community</h2>
 		<p class="desc" data-aos="fade-up">Ask questions, get answers, and talk to other Kollectors to shape the future of NFT together.</p>
 
-<!--		<div class="counter-box">-->
-<!--			<span id="counter" class="counter">200,000+</span>-->
-<!--		</div>-->
 		<div class="social-counter-box">
 			<ul class="social-counter-list">
 				<li>
@@ -644,53 +671,52 @@
 	<script src="./js/timeline/timeline.js"></script>
 	<script src="./js/aos/aos.js"></script>
 	<script src="./js/main.js"></script>
-<!--<script>-->
-<!--	var tag = document.createElement('script');-->
-<!--	tag.src = "https://www.youtube.com/iframe_api";-->
-<!--	var firstScriptTag = document.getElementsByTagName('script')[0];-->
-<!--	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);-->
-<!--	var player;-->
-<!--	function onYouTubeIframeAPIReady() {-->
-<!--		player = new YT.Player('player', {-->
-<!--			videoId: 'fNU-XAZjhzA',-->
-<!--			playerVars: {-->
-<!--				'autoplay': 1,-->
-<!--				'rel': 0,-->
-<!--				'showinfo': 0,-->
-<!--				'modestbranding': 1,-->
-<!--				'playsinline': 1,-->
-<!--				'showinfo': 0,-->
-<!--				'rel': 0,-->
-<!--				'controls': 0,-->
-<!--				'color':'white',-->
-<!--				'loop': 1,-->
-<!--				'mute':1,-->
-<!--				// 'origin': 'https://meeranblog24x7.blogspot.com/'-->
-<!--			},-->
-<!--			events: {-->
-<!--				'onReady': onPlayerReady,-->
-<!--				// 'onStateChange': onPlayerStateChange-->
-<!--			}-->
-<!--		});-->
-<!--	}-->
-<!--	function onPlayerReady(event) {-->
-<!--		player.playVideo();-->
-<!--		player.mute();-->
-<!--	}-->
-<!--	var done = false;-->
-<!--	function onPlayerStateChange(event) {-->
-<!--		if (event.data == YT.PlayerState.PLAYING && !done) {-->
-<!--			setTimeout(stopVideo, 6000);-->
-<!--			done = true;-->
-<!--		}-->
-<!--	}-->
-<!--	function stopVideo() {-->
-<!--		player.stopVideo();-->
-<!--	}-->
-<!--</script>-->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>-->
-<!--	<script src="//unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>-->
+	<script src="./js/youtube_iframe_api.js"></script>
 <script>
+	const idAry = ['player_a','player_b'],
+		urlAry = ['NCH_c40oDA4', 'NCH_c40oDA4'],
+		objAry = [];
+
+	function onYouTubeIframeAPIReady() {
+		for (let i = 0; i < idAry.length; i++) {
+			let player;
+			let playerId = idAry[i];
+
+			player = new YT.Player(playerId, {
+				videoId: urlAry[i],
+				playerVars: {
+					'autoplay': 1,
+					'rel': 0,
+					'showinfo': 0,
+					'modestbranding': 1,
+					'playsinline': 1,
+					'showinfo': 0,
+					'rel': 0,
+					'controls': 0,
+					'color':'white',
+					'loop': 1,
+					'mute':1,
+				},
+				// events: {
+				// 	'onReady': onPlayerReady,
+				// }
+			});
+			objAry.push(player);
+		}
+	}
+
+	$('#youtubeBoxA .btn-play').click(() => {
+		objAry[0].playVideo();
+		objAry[0].mute();
+		$('#youtubeBoxA .youtube-backdrop').addClass('off');
+		$('#youtubeBoxA .btn-play').hide();
+	});
+	$('#youtubeBoxB .btn-play').click(() => {
+		objAry[1].playVideo();
+		objAry[1].mute();
+		$('#youtubeBoxB .youtube-backdrop').addClass('off');
+		$('#youtubeBoxB .btn-play').hide();
+	});
 	AOS.init();
 </script>
 </body>

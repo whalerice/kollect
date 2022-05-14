@@ -148,6 +148,9 @@
 
 .main-slider {
 	width: 100%;
+	.ani-line {
+		display: none;
+	}
 	.slick-slide {
 		position: relative;
 		width: 100%;
@@ -578,6 +581,9 @@
 	overflow-x: hidden;
 	//@include section('default');
 	@include txt;
+	.container {
+		max-width: 80rem;
+	}
 	.title-group {
 		text-align: center;
 	}
@@ -906,15 +912,21 @@
 				}
 			}
 			.ani-line {
+				display: block;
 				position: absolute;
 				top: calc(50% + 0.5rem);
 				left: 0;
 				width: 72%;
 				height: 1rem;
-				background-color: #fff;
+				background-color: transparent;
 				z-index: 2;
 				border-radius: 0 1rem 1rem 0;
-				font-size: 0;
+				.ico {
+					width: 0;
+					height: 100%;
+					background-color: #fff;
+					border-radius: 0 1rem 1rem 0;
+				}
 			}
 		}
 		.slide-2 {
@@ -927,6 +939,10 @@
 			.img {
 				padding-top: 0;
 				height: auto;
+				.lottie {
+					position: relative;
+					z-index: 5;
+				}
 			}
 			.text-group {
 				min-height: initial;

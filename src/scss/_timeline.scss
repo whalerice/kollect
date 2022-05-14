@@ -171,12 +171,12 @@
 			margin-left: 0;
 		}
 		&:nth-child(2n) .timeline-card-img-wrap{
-			transform: translateX(200%);
+			transform: translateX(150%);
 			padding-left: 5rem;
 		}
 
 		&:nth-child(2n + 1) .timeline-card-img-wrap{
-			transform: translateX(-200%);
+			transform: translateX(-50%);
 			padding-right: 5rem;
 		}
 
