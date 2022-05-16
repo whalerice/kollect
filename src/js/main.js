@@ -19,7 +19,7 @@
 					i = 0;
 					// ani.playSegments([0, 24]);
 					ani.play();
-					// ani.playSegments([30,100]);
+					ani.playSegments([30,100]);
 				} else {
 					width++;
 					elem.style.width = width + "%";
