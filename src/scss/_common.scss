@@ -238,6 +238,7 @@ body.before-load {
 		transition: opacity 0.3s ease;
 		&.off {
 			opacity: 0;
+			height: 0;
 		}
 	}
 	&.b2 {
@@ -348,6 +349,10 @@ body.before-load {
 }
 
 @media (min-width: 960px) {
+	.logo {
+		width: 15rem;
+		height: ratioH(8.9rem, 3.7rem, 15rem);
+	}
 	.scroll-down {
 		display: block;
 	}

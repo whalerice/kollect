@@ -742,6 +742,7 @@ body.before-load .loading {
 
 .youtube-box .youtube-backdrop.off {
   opacity: 0;
+  height: 0;
 }
 
 .youtube-box.b2 {
@@ -874,6 +875,10 @@ body.before-load .loading {
 }
 
 @media (min-width: 960px) {
+  .logo {
+    width: 15rem;
+    height: 6.23596rem;
+  }
   .scroll-down {
     display: block;
   }
@@ -1091,6 +1096,10 @@ body.before-load .loading {
   display: none;
 }
 
+.main-slider .hidden {
+  display: none;
+}
+
 .main-slider .slick-slide {
   position: relative;
   width: 100%;
@@ -1101,6 +1110,11 @@ body.before-load .loading {
   height: 50rem;
   position: relative;
   z-index: 5;
+}
+
+.main-slider .slick-slide .img canvas {
+  width: 100%;
+  height: auto;
 }
 
 .main-slider .slick-slide .text-group {
