@@ -310,7 +310,6 @@
 				$('.utillity .ico-round').removeClass('on');
 			}
 			//currentYOffset / scrollHeight
-			console.log()
 			cardEvent();
 		}
 	});
