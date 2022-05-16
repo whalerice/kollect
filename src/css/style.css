@@ -193,7 +193,7 @@ body {
   border-radius: 1rem;
   overflow: hidden;
   background-color: #fff;
-  max-width: 90%;
+  max-width: 100%;
   margin-bottom: 3rem;
 }
 
@@ -1976,7 +1976,7 @@ body.before-load .loading {
 }
 
 .community .other-social-item {
-  width: calc(50% - 2rem);
+  width: 50%;
 }
 
 .community .other-social-item a {
@@ -2002,7 +2002,7 @@ body.before-load .loading {
   width: 1.8rem;
   height: 1.8rem;
   background-size: auto 0.8rem;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 
 @media (min-width: 376px) {
