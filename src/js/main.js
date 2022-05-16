@@ -38,7 +38,7 @@
 
 	let ani = lottie.loadAnimation({
 		container: document.getElementById('lottie'),
-		renderer: 'svg',
+		renderer: 'canvas',
 		loop: true,
 		autoplay: false,
 		// path: 'https://assets3.lottiefiles.com/packages/lf20_0uqjzch2.json'
@@ -46,7 +46,7 @@
 	});
 	let ani2 = lottie.loadAnimation({
 		container: document.getElementById('lottie2'),
-		renderer: 'svg',
+		renderer: 'canvas',
 		loop: true,
 		autoplay: false,
 		// path: 'https://assets5.lottiefiles.com/packages/lf20_e6pyivz1.json'

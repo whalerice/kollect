@@ -1112,11 +1112,6 @@ body.before-load .loading {
   z-index: 5;
 }
 
-.main-slider .slick-slide .img canvas {
-  width: 100%;
-  height: auto;
-}
-
 .main-slider .slick-slide .text-group {
   position: relative;
   z-index: 1;
