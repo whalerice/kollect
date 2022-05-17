@@ -59,62 +59,62 @@
 	&-instagram{@include social('instagram');}
 	&-linkedin{@include social('linkedin');}
 }
-body.before-load {
-	overflow: hidden;
-	.loading {
-		opacity: 1;
-		z-index: 100;
-		visibility: visible;
-	}
-}
-.loading {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 0;
-	opacity: 0;
-	transition: 0.5s;
-	background-color: rgba(0,0,0,0.5);
-	visibility: hidden;
-}
-
-@keyframes loading-spin {
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
-@keyframes loading-circle-ani {
-	0% {
-		stroke-dashoffset: 157;
-	}
-	75% {
-		stroke-dashoffset: -147;
-	}
-	100% {
-		stroke-dashoffset: -157;
-	}
-}
-
-.loading-circle {
-	width: 54px;
-	height: 54px;
-	animation: loading-spin 3s infinite;
-	circle {
-		stroke: #fff;
-		stroke-width: 4;
-		// getTotalLength()로 strock의 길이를 얻을 수 있다.
-		stroke-dasharray: 157;
-		stroke-dashoffset: 0;
-		fill: transparent;
-		animation: loading-circle-ani 1s infinite;
-	}
-}
+//body.before-load {
+//	overflow: hidden;
+//	.loading {
+//		opacity: 1;
+//		z-index: 100;
+//		visibility: visible;
+//	}
+//}
+//.loading {
+//	display: flex;
+//	align-items: center;
+//	justify-content: center;
+//	position: fixed;
+//	top: 0;
+//	right: 0;
+//	bottom: 0;
+//	left: 0;
+//	z-index: 0;
+//	opacity: 0;
+//	transition: 0.5s;
+//	background-color: rgba(0,0,0,0.5);
+//	visibility: hidden;
+//}
+//
+//@keyframes loading-spin {
+//	100% {
+//		transform: rotate(360deg);
+//	}
+//}
+//
+//@keyframes loading-circle-ani {
+//	0% {
+//		stroke-dashoffset: 157;
+//	}
+//	75% {
+//		stroke-dashoffset: -147;
+//	}
+//	100% {
+//		stroke-dashoffset: -157;
+//	}
+//}
+//
+//.loading-circle {
+//	width: 54px;
+//	height: 54px;
+//	animation: loading-spin 3s infinite;
+//	circle {
+//		stroke: #fff;
+//		stroke-width: 4;
+//		// getTotalLength()로 strock의 길이를 얻을 수 있다.
+//		stroke-dasharray: 157;
+//		stroke-dashoffset: 0;
+//		fill: transparent;
+//		animation: loading-circle-ani 1s infinite;
+//	}
+//}
 
 .btn-menu {
 	display: block;

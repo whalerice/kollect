@@ -58,7 +58,7 @@
 		infinite: true,
 		dots: true,
 		arrows: false,
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 9000,
 	});
 
@@ -279,7 +279,7 @@
 		// lottie.resize();
 	})
 	window.addEventListener("load", () => {
-		document.body.classList.remove('before-load');
+		// document.body.classList.remove('before-load');
 		// move();
 		winW = window.innerWidth;
 		utillityimgPos1 = $('#utillityimgPos1').offset().top;
