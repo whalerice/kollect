@@ -150,13 +150,12 @@ body {
 }
 
 video {
+	width: 0;
+	height: 0;
 	position: absolute;
 	z-index: -1;
 	top: 0;
 	left: 0;
-	opacity: 0;
-	-webkit-filter: contrast(101%);
-	filter: contrast(101%);
 }
 
 .main-slider {
