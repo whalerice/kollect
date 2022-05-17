@@ -58,29 +58,29 @@
 		infinite: true,
 		dots: true,
 		arrows: false,
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 9000,
 	});
 
-	plays('sourcevideo','outputcanvas');
-	plays('sourcevideo2','outputcanvas2');
+	// plays('sourcevideo','outputcanvas');
+	// plays('sourcevideo2','outputcanvas2');
 
-	// let ani = lottie.loadAnimation({
-	// 	container: document.getElementById('lottie'),
-	// 	renderer: 'canvas',
-	// 	loop: true,
-	// 	autoplay: false,
-	// 	// path: 'https://assets3.lottiefiles.com/packages/lf20_0uqjzch2.json'
-	// 	path: '/images/slider/data_2.json'
-	// });
-	// let ani2 = lottie.loadAnimation({
-	// 	container: document.getElementById('lottie2'),
-	// 	renderer: 'canvas',
-	// 	loop: true,
-	// 	autoplay: false,
-	// 	// path: 'https://assets5.lottiefiles.com/packages/lf20_e6pyivz1.json'
-	// 	path: '/images/slider/data_3.json'
-	// });
+	let ani = lottie.loadAnimation({
+		container: document.getElementById('lottie'),
+		renderer: 'canvas',
+		loop: true,
+		autoplay: false,
+		// path: 'https://assets3.lottiefiles.com/packages/lf20_0uqjzch2.json'
+		path: '/images/slider/data_2.json'
+	});
+	let ani2 = lottie.loadAnimation({
+		container: document.getElementById('lottie2'),
+		renderer: 'canvas',
+		loop: true,
+		autoplay: false,
+		// path: 'https://assets5.lottiefiles.com/packages/lf20_e6pyivz1.json'
+		path: '/images/slider/data_3.json'
+	});
 	// ani.setDirection(-1)
 	// ani2.setDirection(-1)
 
@@ -88,11 +88,13 @@
 
 		// ani.goToAndPlay(1, true)
 		// ani.goToAndStop(5, true)
-		// currentSlide === 0 ? ani2.play() : ani2.stop();
-		// currentSlide === 1 ? move() : ani.stop();
+		currentSlide === 0 ? ani2.play() : ani2.stop();
+		currentSlide === 1 ? ani.play() : ani.stop();
 
 		// currentSlide === 0 ? ani2.play() : ani2.stop();
 		// currentSlide === 1 ? move() : ani.stop();
+
+		// document.querySelector('#sourcevideo').played()
 	});
 
 	function navToggle(e) {
@@ -274,14 +276,25 @@
 			groups3.css('transform',`matrix(1, 0, 0, 1, ${val}, 0)`)
 		}
 	}
-
+	plays('sourcevideo','outputcanvas');
+	plays('sourcevideo2','outputcanvas2');
 	window.addEventListener('resize', () =>{
 		// lottie.resize();
 	})
 	window.addEventListener("load", () => {
+
 		// document.body.classList.remove('before-load');
 		// move();
 		winW = window.innerWidth;
+
+		// if (winW < 992) {
+		// 	ani.play();
+		// }
+		// else {
+		// 	plays('sourcevideo','outputcanvas');
+		// 	plays('sourcevideo2','outputcanvas2');
+		// }
+
 		utillityimgPos1 = $('#utillityimgPos1').offset().top;
 		utillityimgPos2 = $('#utillityimgPos2').offset().top;
 		utillityimgPos3 = $('#utillityimgPos3').offset().top;
