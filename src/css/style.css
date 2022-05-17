@@ -492,10 +492,6 @@ body {
   background-position: 50% 50%;
 }
 
-body.before-load {
-  overflow: hidden;
-}
-
 body.before-load .loading {
   opacity: 1;
   z-index: 100;
