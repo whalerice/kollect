@@ -280,6 +280,14 @@
 	plays('sourcevideo2','outputcanvas2');
 	window.addEventListener('resize', () =>{
 		// lottie.resize();
+		if (winW < 992) {
+			ani.play();
+		}
+		else {
+			ani2.stop();
+			// plays('sourcevideo','outputcanvas');
+			// plays('sourcevideo2','outputcanvas2');
+		}
 	})
 	window.addEventListener("load", () => {
 		document.body.classList.remove('before-load');
