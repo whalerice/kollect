@@ -1090,6 +1090,7 @@ body.before-load .loading {
 
 .main-slider {
   width: 100%;
+  overflow-x: hidden;
 }
 
 .main-slider .ani-line {
@@ -1103,7 +1104,6 @@ body.before-load .loading {
 .main-slider .slick-slide {
   position: relative;
   width: 100%;
-  overflow-x: hidden;
 }
 
 .main-slider .slick-slide .img {
