@@ -58,8 +58,8 @@
 		infinite: true,
 		dots: true,
 		arrows: false,
-		autoplay: true,
-		autoplaySpeed: 9000,
+		autoplay: false,
+		autoplaySpeed: 5000,
 	});
 
 	// plays('sourcevideo','outputcanvas');
@@ -67,7 +67,7 @@
 
 	let ani = lottie.loadAnimation({
 		container: document.getElementById('lottie'),
-		renderer: 'canvas',
+		renderer: 'svg',
 		loop: true,
 		autoplay: false,
 		// path: 'https://assets3.lottiefiles.com/packages/lf20_0uqjzch2.json'
@@ -75,7 +75,7 @@
 	});
 	let ani2 = lottie.loadAnimation({
 		container: document.getElementById('lottie2'),
-		renderer: 'canvas',
+		renderer: 'svg',
 		loop: true,
 		autoplay: false,
 		// path: 'https://assets5.lottiefiles.com/packages/lf20_e6pyivz1.json'
@@ -279,20 +279,21 @@
 	plays('sourcevideo','outputcanvas');
 	plays('sourcevideo2','outputcanvas2');
 	window.addEventListener('resize', () =>{
-		// lottie.resize();
+		lottie.resize();
 	})
 	window.addEventListener("load", () => {
 		document.body.classList.remove('before-load');
 		// move();
 		winW = window.innerWidth;
 
-		// if (winW < 992) {
-		// 	ani.play();
-		// }
-		// else {
-		// 	plays('sourcevideo','outputcanvas');
-		// 	plays('sourcevideo2','outputcanvas2');
-		// }
+		if (winW < 992) {
+			ani.play();
+		}
+		else {
+			ani2.stop();
+			// plays('sourcevideo','outputcanvas');
+			// plays('sourcevideo2','outputcanvas2');
+		}
 
 		utillityimgPos1 = $('#utillityimgPos1').offset().top;
 		utillityimgPos2 = $('#utillityimgPos2').offset().top;

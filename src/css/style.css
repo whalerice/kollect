@@ -1117,9 +1117,8 @@ video {
   overflow: hidden;
 }
 
-.main-slider .slick-slide .img .lottie {
-  width: 100%;
-  height: 100%;
+.main-slider .slick-slide .img > canvas {
+  display: none;
 }
 
 .main-slider .slick-slide .text-group {
@@ -1194,6 +1193,10 @@ video {
 .main-slider .slide-2 .img > canvas {
   width: auto;
   height: 70%;
+}
+
+.main-slider .slide-2 .img .lottie svg {
+  width: 150% !important;
 }
 
 .main-slider .slick-dots {
