@@ -1187,6 +1187,7 @@ video {
 
 .main-slider .slide-1 .img .lottie svg {
   width: auto !important;
+  max-width: 100%;
 }
 
 .main-slider .slide-2 {
