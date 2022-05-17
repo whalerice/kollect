@@ -58,7 +58,7 @@
 		infinite: true,
 		dots: true,
 		arrows: false,
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 9000,
 	});
 
