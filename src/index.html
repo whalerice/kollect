@@ -34,7 +34,8 @@
 	<link rel="stylesheet" href="./js/aos/aos.css">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="before-load">
+<!-- class="before-load"-->
+<body>
 <div class="loading">
 	<svg class="loading-circle">
 		<circle cx="50%" cy="50%" r="25"></circle>
@@ -65,7 +66,9 @@
 	<div class="main-slider">
 		<div class="slide-1">
 			<div class="img">
-				<div id="lottie" class="lottie"></div>
+				<canvas id="outputcanvas"></canvas>
+				<video id="sourcevideo"  controls autoplay muted src="./images/slider/a.webm"></video>
+<!--				<div id="lottie" class="lottie"></div>-->
 			</div>
 			<div class="text-group">
 				<hgroup>
@@ -78,17 +81,16 @@
 			</div>
 		</div>
 		<div class="slide-2">
-			<div class="container">
-				<div class="img">
-					<div id="lottie2" class="lottie"></div>
-				</div>
-				<div class="text-group">
-					<hgroup>
-						<h4 class="s-title">Metaverse Playground </h4>
-						<h2 class="title">for All NFTs</h2>
-					</hgroup>
-					<p class="desc">Step into the Munchie Kingdom, an exciting fantasy universe full of jellies, dumplings, snacks, and the all powerful , Avatar booster, $WOC. Train, strategize, and unite with holders around the world as you compete for resources and fight to become the next Munchie King!</p>
-				</div>
+			<div class="img">
+				<canvas id="outputcanvas2"></canvas>
+				<video id="sourcevideo2"  controls autoplay muted src="./images/slider/b.webm"></video>
+			</div>
+			<div class="text-group">
+				<hgroup>
+					<h4 class="s-title">Metaverse Playground </h4>
+					<h2 class="title">for All NFTs</h2>
+				</hgroup>
+				<p class="desc">Step into the Munchie Kingdom, an exciting fantasy universe full of jellies, dumplings, snacks, and the all powerful , Avatar booster, $WOC. Train, strategize, and unite with holders around the world as you compete for resources and fight to become the next Munchie King!</p>
 			</div>
 		</div>
 	</div>
@@ -672,7 +674,7 @@
 		<li><a href="#roadmap" class="side-nav-link">ROADMAP</a></li>
 	</ul>
 </div>
-	<script src="./js/lottie/lottie.min.js"></script>
+<!--	<script src="./js/lottie/lottie.min.js"></script>-->
 	<script src="./js/jquery-3.6.0.slim.min.js"></script>
 	<script src="./js/counter-up-2.js"></script>
 	<script src="./js/slick/slick.min.js"></script>
