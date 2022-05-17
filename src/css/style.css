@@ -1179,6 +1179,16 @@ video {
   height: 100%;
 }
 
+.main-slider .slide-1 .img .lottie {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.main-slider .slide-1 .img .lottie svg {
+  width: auto !important;
+}
+
 .main-slider .slide-2 {
   background: url("../images/slider-bg-2.jpg") 50% 50% no-repeat;
   background-size: auto 100%;
@@ -2027,6 +2037,9 @@ video {
   .main-slider .slide-2 .img > canvas {
     margin: auto;
     max-height: 50rem;
+  }
+  .main-slider .slide-2 .img .lottie svg {
+    width: 100% !important;
   }
   .community .social-counter-list li {
     padding: 1rem;

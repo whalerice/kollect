@@ -279,7 +279,7 @@
 	plays('sourcevideo','outputcanvas');
 	plays('sourcevideo2','outputcanvas2');
 	window.addEventListener('resize', () =>{
-		lottie.resize();
+		// lottie.resize();
 	})
 	window.addEventListener("load", () => {
 		document.body.classList.remove('before-load');
