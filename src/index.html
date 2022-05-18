@@ -34,12 +34,7 @@
 	<link rel="stylesheet" href="./js/aos/aos.css">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="before-load">
-<div class="loading">
-	<svg class="loading-circle">
-		<circle cx="50%" cy="50%" r="25"></circle>
-	</svg>
-</div>
+<body>
 <header class="header">
 	<div class="container">
 		<a href="/" class="logo">Kollect</a>
@@ -62,33 +57,51 @@
 	</div>
 </header>
 <section class="main">
-	<div class="main-slider">
-		<div class="slide-1">
-			<div class="img">
-				<canvas id="outputcanvas"></canvas>
-				<div id="lottie" class="lottie"></div>
-			</div>
-			<div class="text-group">
-				<hgroup>
-					<h2 class="title">Empower<br> your NFT</h2>
-				</hgroup>
-				<p class="desc">Kollect is the metaverse playground that brings life and adds value to your NFT collections. All NFTs are unique, and you are the author of your NFT's legend. Through Kollect, NFTs are given infinite paths to realize their true potential. To be a hero, a villain, or even a fool, you decide!</p>
-			</div>
-		</div>
-		<div class="slide-2">
-			<div class="img">
-				<canvas id="outputcanvas2"></canvas>
-				<div id="lottie2" class="lottie"></div>
-			</div>
-			<div class="text-group">
-				<hgroup>
-					<h4 class="s-title">Metaverse Playground </h4>
-					<h2 class="title">for All NFTs</h2>
-				</hgroup>
-				<p class="desc">Step into the Munchie Kingdom, an exciting fantasy universe full of jellies, dumplings, snacks, and the all powerful , Avatar booster, $WOC. Train, strategize, and unite with holders around the world as you compete for resources and fight to become the next Munchie King!</p>
-			</div>
-		</div>
+	<div class="video-box">
+		<video autoplay muted loop id="mainVideoM" playsinline>
+			<source src="./images/main/main_m.mp4" type="video/mp4" />
+			Your browser does not support HTML5 video.
+		</video>
+		<video autoplay muted loop id="mainVideoP" playsinline>
+			<source src="./images/main/main.mp4" type="video/mp4" />
+			Your browser does not support HTML5 video.
+		</video>
 	</div>
+	<div class="text-group">
+		<hgroup>
+			<h3 class="s-title">Metaverse Playground for All NFTs </h3>
+			<h2 class="title">Empower your NFT</h2>
+		</hgroup>
+		<p class="desc">Kollect is the metaverse playground that brings life and adds value to your NFT collections. All NFTs are unique, and you are the author of your NFT's legend. Through Kollect, NFTs are given infinite paths to realize their true potential. To be a hero, a villain, or even a fool, you decide!</p>
+	</div>
+
+<!--	<div class="main-slider">-->
+<!--		<div class="slide-1">-->
+<!--			<div class="img">-->
+<!--				<canvas id="outputcanvas"></canvas>-->
+<!--				<div id="lottie" class="lottie"></div>-->
+<!--			</div>-->
+<!--			<div class="text-group">-->
+<!--				<hgroup>-->
+<!--					<h2 class="title">Empower<br> your NFT</h2>-->
+<!--				</hgroup>-->
+<!--				<p class="desc">Kollect is the metaverse playground that brings life and adds value to your NFT collections. All NFTs are unique, and you are the author of your NFT's legend. Through Kollect, NFTs are given infinite paths to realize their true potential. To be a hero, a villain, or even a fool, you decide!</p>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		<div class="slide-2">-->
+<!--			<div class="img">-->
+<!--				<canvas id="outputcanvas2"></canvas>-->
+<!--				<div id="lottie2" class="lottie"></div>-->
+<!--			</div>-->
+<!--			<div class="text-group">-->
+<!--				<hgroup>-->
+<!--					<h4 class="s-title">Metaverse Playground </h4>-->
+<!--					<h2 class="title">for All NFTs</h2>-->
+<!--				</hgroup>-->
+<!--				<p class="desc">Step into the Munchie Kingdom, an exciting fantasy universe full of jellies, dumplings, snacks, and the all powerful , Avatar booster, $WOC. Train, strategize, and unite with holders around the world as you compete for resources and fight to become the next Munchie King!</p>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
 	<div class="scroll-down">
 		<span>scroll down</span>
 		<i class="ico-scroll-down"></i>
@@ -356,9 +369,9 @@
 		<h2 class="title" data-aos="fade-up">Investors</h2>
 		<p class="desc" data-aos="fade-up">We are backed by some of the world's most influential investors. </p>
 	</div>
-	<picture data-aos="zoom-in">
+	<picture data-aos="zoom-in" >
 		<source media="(min-width: 960px)" srcset="./images/investors/brands-pc.png">
-		<img src="./images/investors/brands.png" alt="brands" data-aos="zoom-in">
+		<img src="./images/investors/brands.png" alt="brands" data-aos="flip-up">
 	</picture>
 </section>
 <section id="milestone" class="milestone">
@@ -666,8 +679,6 @@
 <!--	<source src="./images/slider/vedio_b.mp4" type="video/mp4">-->
 <!--	Sorry, your browser doesn't support embedded videos.-->
 <!--</video>-->
-<video id="sourcevideo"  autoplay muted playsinline loop src="./images/slider/vedio_a.mp4"></video>
-<video id="sourcevideo2" autoplay muted playsinline loop src="./images/slider/vedio_b.mp4"></video>
 <button type="button" class="btn-go-top" id="goTop">go to top</button>
 
 <div class="sidebar" id="sidebar">

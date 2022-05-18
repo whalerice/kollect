@@ -1,3 +1,6 @@
+body {
+	overflow-x: hidden;
+}
 .header {
 	width: 100%;
 	height: 6rem;
@@ -136,24 +139,74 @@
 	}
 }
 
+#mainVideoM {
+	display: block;
+}
+#mainVideoP {
+	display: none;
+}
+
 .main {
 	position: relative;
+	overflow: hidden;
 	.scroll-down {
 		position: absolute;
 		bottom: 5rem;
 		left: 50%;
 		transform: translateX(-50%);
 	}
+	.text-group {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 0 4rem 4rem;
+		hgroup {
+			margin-bottom: 3rem;
+		}
+		.title {
+			font-weight: 700;
+			font-size: 3.8rem;
+			letter-spacing: -0.2rem;
+		}
+		.s-title {
+			font-size: 1.8rem;
+		}
+		.desc {
+			color: #F2F2F2;
+		}
+	}
+}
+.video-box {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	video {
+		width: 120%;
+		position: absolute;
+		top: -10rem;
+		left: 50%;
+		right: 50%;
+		transform: translateX(-50%);
+	}
+	//display: flex;
+	//align-items: center;
+	//justify-content: center;
+	//
+	//video {
+	//	width: 125%;
+	//	height: auto;
+	//	margin-top: -10rem;
+	//}
 }
 
-video {
-	width: 0;
-	height: 0;
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	left: 0;
-}
+//video {
+//	width: 0;
+//	height: 0;
+//	position: absolute;
+//	z-index: -1;
+//	top: 0;
+//	left: 0;
+//}
 
 .main-slider {
 	width: 100%;
@@ -870,21 +923,27 @@ video {
 }
 
 @media (min-width: 768px) {
-	.main-slider {
-		.slide-2 {
-			.img {
-				> canvas {
-					margin: auto;
-					max-height: 50rem;
-				}
-				.lottie {
-					svg {
-						width: 100% !important;
-					}
-				}
-			}
-		}
+	.video-box {
+		video {
+			width: 100%;
+			margin-top: -20rem;
+		};
 	}
+	//.main-slider {
+	//	.slide-2 {
+	//		.img {
+	//			> canvas {
+	//				margin: auto;
+	//				max-height: 50rem;
+	//			}
+	//			.lottie {
+	//				svg {
+	//					width: 100% !important;
+	//				}
+	//			}
+	//		}
+	//	}
+	//}
 	.community {
 		.social-counter-list {
 			li {
@@ -934,6 +993,40 @@ video {
 
 }
 
+//@media (min-width: 960px) and (min-height: 850px) {
+//	#mainVideoM {
+//		display: none;
+//	}
+//	#mainVideoP {
+//		display: block;
+//	}
+//	.main {
+//		video {
+//			width: 100%;
+//		}
+//		.text-group {
+//			padding: 0;
+//			background-color: blue;
+//			//position: relative;
+//			//z-index: 1;
+//			//min-height: 28rem;
+//			//padding: 0 4rem 4rem;
+//			//hgroup {
+//			//	margin-bottom: 3rem;
+//			//}
+//			//.title {
+//			//	font-weight: 700;
+//			//	font-size: 3.8rem;
+//			//}
+//			//.s-title {
+//			//	font-size: 2rem;
+//			//}
+//			//.desc {
+//			//	color: #F2F2F2;
+//			//}
+//		}
+//	}
+//}
 @media (min-width: 960px) {
 	.header {
 		.nav {
@@ -944,89 +1037,123 @@ video {
 			}
 		}
 	}
-	.main-slider {
-		.slick-slide {
-			height: 100vh;
-			.img {
-				position: relative;
-				height: 100%;
-				max-width: 144rem;
-				margin: auto;
-				z-index: 0;
-				justify-content: flex-end;
-				> canvas {
-					display: block;
-				}
-				.lottie {
-					display: none;
-				}
+	#mainVideoM {
+		display: none;
+	}
+	#mainVideoP {
+		display: block;
+	}
+	.main  {
+		.text-group {
+			padding: 0;
+			position: absolute;
+			top: 54%;
+			left: 10%;
+			bottom: initial;
+			width: 80rem;
+			hgroup {}
+			.s-title {
+				font-size: 3.8rem;
+				margin-bottom: 1.5rem;
 			}
-			.text-group {
-				width: 100%;
-				position: absolute;
-				z-index: 2;
-				top: calc(50%  + 5rem);
-				left: 50%;
-				max-width: 144rem;
-				transform: translateX(-50%);
+			.title {
+				font-size: 7rem;
 			}
-		}
-		.slide-1  {
-			.img {
-				> canvas {
-					width: 60rem;
-					height: auto;
-				}
-			}
-			.text-group {
-				.title {
-					font-size: 7rem;
-					br {
-						display: none;
-					}
-				}
-				.desc {
-					max-width: 62rem;
-					font-size: 2rem;
-				}
-			}
-		}
-		.slide-2 {
-			.img {
-				transform: translateX(40%);
-				> canvas {
-					max-height: 60rem;
-				}
-			}
-			.text-group {
-				.title {
-					font-size: 10rem;
-				}
-				.s-title {
-					font-size: 3.8rem;
-					margin-bottom: 1rem;
-				}
-				.desc {
-					max-width: 60rem;
-					font-size: 2rem;
-				}
-			}
-		}
-
-		.slick-dots {
-			bottom: 15rem;
-			left: 50%;
-			transform: translateX(-50%);
-			li {
-				margin-right: 0.4rem;
-				margin-left: 0.4rem;
-				button {
-					width: 3.8rem;
-					height: 1.5rem;
-				}
+			.desc {
+				font-size: 2rem;
 			}
 		}
 	}
+	.video-box {
+		video {
+			width: auto;
+			height: 130%;
+			margin-top: -2%;
+		};
+	}
+	//.main-slider {
+	//	.slick-slide {
+	//		height: 100vh;
+	//		.img {
+	//			position: relative;
+	//			height: 100%;
+	//			max-width: 144rem;
+	//			margin: auto;
+	//			z-index: 0;
+	//			justify-content: flex-end;
+	//			> canvas {
+	//				display: block;
+	//			}
+	//			.lottie {
+	//				display: none;
+	//			}
+	//		}
+	//		.text-group {
+	//			width: 100%;
+	//			position: absolute;
+	//			z-index: 2;
+	//			top: calc(50%  + 5rem);
+	//			left: 50%;
+	//			max-width: 144rem;
+	//			transform: translateX(-50%);
+	//		}
+	//	}
+	//	.slide-1  {
+	//		.img {
+	//			> canvas {
+	//				width: 60rem;
+	//				height: auto;
+	//			}
+	//		}
+	//		.text-group {
+	//			.title {
+	//				font-size: 7rem;
+	//				br {
+	//					display: none;
+	//				}
+	//			}
+	//			.desc {
+	//				max-width: 62rem;
+	//				font-size: 2rem;
+	//			}
+	//		}
+	//	}
+	//	.slide-2 {
+	//		.img {
+	//			transform: translateX(40%);
+	//			> canvas {
+	//				max-height: 60rem;
+	//			}
+	//		}
+	//		.text-group {
+	//			.title {
+	//				font-size: 10rem;
+	//			}
+	//			.s-title {
+	//				font-size: 3.8rem;
+	//				margin-bottom: 1rem;
+	//			}
+	//			.desc {
+	//				max-width: 60rem;
+	//				font-size: 2rem;
+	//			}
+	//		}
+	//	}
+	//
+	//	.slick-dots {
+	//		bottom: 15rem;
+	//		left: 50%;
+	//		transform: translateX(-50%);
+	//		li {
+	//			margin-right: 0.4rem;
+	//			margin-left: 0.4rem;
+	//			button {
+	//				width: 3.8rem;
+	//				height: 1.5rem;
+	//			}
+	//		}
+	//	}
+	//}
 	.team {
 		min-height: 100vh;
 		text-align: center;
@@ -1146,14 +1273,14 @@ video {
 		}
 		.text-group {
 			.explore {
-				width: 16rem;
+				width: 14rem;
 			}
 			.expand {
-				width: 14rem;
+				width: 10rem;
 				margin-top: 50%
 			}
 			.earn {
-				width: 15rem;
+				width: 12rem;
 			}
 		}
 		.gameplay {
@@ -1389,6 +1516,13 @@ video {
 }
 
 @media (min-width: 1600px) {
+	.video-box {
+		video {
+			width: 100%;
+			height: auto;
+			margin-top: 0;
+		}
+	}
 	.community {
 		.other-social-list {
 			transform: translate(48rem, -8.5rem);
@@ -1404,3 +1538,19 @@ video {
 		min-width: calc(100vw - 15rem);
 	}
 }
+
+//@media (orientation: landscape) {
+//	#mainVideoM {
+//		display: none;
+//	}
+//	#mainVideoP {
+//		display: block;
+//	}
+//	.main {
+//		color: red;
+//	}
+//	.video-box {
+//		height: auto;
+//		max-height: 100vh;
+//	}
+//}

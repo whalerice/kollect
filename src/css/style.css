@@ -893,6 +893,10 @@ body.before-load .loading {
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .header {
   width: 100%;
   height: 6rem;
@@ -1071,8 +1075,17 @@ body.before-load .loading {
   height: 0.5rem;
 }
 
+#mainVideoM {
+  display: block;
+}
+
+#mainVideoP {
+  display: none;
+}
+
 .main {
   position: relative;
+  overflow: hidden;
 }
 
 .main .scroll-down {
@@ -1084,13 +1097,46 @@ body.before-load .loading {
           transform: translateX(-50%);
 }
 
-video {
-  width: 0;
-  height: 0;
+.main .text-group {
   position: absolute;
-  z-index: -1;
-  top: 0;
+  bottom: 0;
   left: 0;
+  padding: 0 4rem 4rem;
+}
+
+.main .text-group hgroup {
+  margin-bottom: 3rem;
+}
+
+.main .text-group .title {
+  font-weight: 700;
+  font-size: 3.8rem;
+  letter-spacing: -0.2rem;
+}
+
+.main .text-group .s-title {
+  font-size: 1.8rem;
+}
+
+.main .text-group .desc {
+  color: #F2F2F2;
+}
+
+.video-box {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.video-box video {
+  width: 120%;
+  position: absolute;
+  top: -10rem;
+  left: 50%;
+  right: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .main-slider {
@@ -2035,12 +2081,9 @@ video {
 }
 
 @media (min-width: 768px) {
-  .main-slider .slide-2 .img > canvas {
-    margin: auto;
-    max-height: 50rem;
-  }
-  .main-slider .slide-2 .img .lottie svg {
-    width: 100% !important;
+  .video-box video {
+    width: 100%;
+    margin-top: -20rem;
   }
   .community .social-counter-list li {
     padding: 1rem;
@@ -2067,83 +2110,34 @@ video {
   .header .nav .nav-list {
     visibility: visible;
   }
-  .main-slider .slick-slide {
-    height: 100vh;
+  #mainVideoM {
+    display: none;
   }
-  .main-slider .slick-slide .img {
-    position: relative;
-    height: 100%;
-    max-width: 144rem;
-    margin: auto;
-    z-index: 0;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .main-slider .slick-slide .img > canvas {
+  #mainVideoP {
     display: block;
   }
-  .main-slider .slick-slide .img .lottie {
-    display: none;
-  }
-  .main-slider .slick-slide .text-group {
-    width: 100%;
+  .main .text-group {
+    padding: 0;
     position: absolute;
-    z-index: 2;
-    top: calc(50%  + 5rem);
-    left: 50%;
-    max-width: 144rem;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    top: 54%;
+    left: 10%;
+    bottom: initial;
+    width: 80rem;
   }
-  .main-slider .slide-1 .img > canvas {
-    width: 60rem;
-    height: auto;
+  .main .text-group .s-title {
+    font-size: 3.8rem;
+    margin-bottom: 1.5rem;
   }
-  .main-slider .slide-1 .text-group .title {
+  .main .text-group .title {
     font-size: 7rem;
   }
-  .main-slider .slide-1 .text-group .title br {
-    display: none;
-  }
-  .main-slider .slide-1 .text-group .desc {
-    max-width: 62rem;
+  .main .text-group .desc {
     font-size: 2rem;
   }
-  .main-slider .slide-2 .img {
-    -webkit-transform: translateX(40%);
-        -ms-transform: translateX(40%);
-            transform: translateX(40%);
-  }
-  .main-slider .slide-2 .img > canvas {
-    max-height: 60rem;
-  }
-  .main-slider .slide-2 .text-group .title {
-    font-size: 10rem;
-  }
-  .main-slider .slide-2 .text-group .s-title {
-    font-size: 3.8rem;
-    margin-bottom: 1rem;
-  }
-  .main-slider .slide-2 .text-group .desc {
-    max-width: 60rem;
-    font-size: 2rem;
-  }
-  .main-slider .slick-dots {
-    bottom: 15rem;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  .main-slider .slick-dots li {
-    margin-right: 0.4rem;
-    margin-left: 0.4rem;
-  }
-  .main-slider .slick-dots li button {
-    width: 3.8rem;
-    height: 1.5rem;
+  .video-box video {
+    width: auto;
+    height: 130%;
+    margin-top: -2%;
   }
   .team {
     min-height: 100vh;
@@ -2310,14 +2304,14 @@ video {
     font-size: 2.6rem;
   }
   .world .text-group .explore {
-    width: 16rem;
+    width: 14rem;
   }
   .world .text-group .expand {
-    width: 14rem;
+    width: 10rem;
     margin-top: 50%;
   }
   .world .text-group .earn {
-    width: 15rem;
+    width: 12rem;
   }
   .world .gameplay {
     margin-top: -25rem;
@@ -2595,6 +2589,11 @@ video {
 }
 
 @media (min-width: 1600px) {
+  .video-box video {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
   .community .other-social-list {
     -webkit-transform: translate(48rem, -8.5rem);
         -ms-transform: translate(48rem, -8.5rem);

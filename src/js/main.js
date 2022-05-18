@@ -28,74 +28,74 @@
 	// 	}
 	// }
 
-	function plays (video,canvas) {
-		const sourcevideo = document.getElementById(video);
-		const outputcanvas = document.getElementById(canvas);
-		const canvasctx = outputcanvas.getContext("2d");
+	// function plays (video,canvas) {
+	// 	const sourcevideo = document.getElementById(video);
+	// 	const outputcanvas = document.getElementById(canvas);
+	// 	const canvasctx = outputcanvas.getContext("2d");
+	//
+	// 	function initCanvas() {
+	// 		outputcanvas.width = sourcevideo.videoWidth;
+	// 		outputcanvas.height = sourcevideo.videoHeight;
+	// 		drawVideo();
+	// 	}
+	//
+	// 	function drawVideo() {
+	// 		canvasctx.drawImage(
+	// 			sourcevideo,
+	// 			0,
+	// 			0,
+	// 			outputcanvas.width,
+	// 			outputcanvas.height
+	// 		);
+	// 		requestAnimationFrame(drawVideo);
+	// 	}
+	//
+	// 	sourcevideo.addEventListener("loadeddata", initCanvas);
+	// }
 
-		function initCanvas() {
-			outputcanvas.width = sourcevideo.videoWidth;
-			outputcanvas.height = sourcevideo.videoHeight;
-			drawVideo();
-		}
 
-		function drawVideo() {
-			canvasctx.drawImage(
-				sourcevideo,
-				0,
-				0,
-				outputcanvas.width,
-				outputcanvas.height
-			);
-			requestAnimationFrame(drawVideo);
-		}
-
-		sourcevideo.addEventListener("loadeddata", initCanvas);
-	}
-
-
-	$('.main-slider').slick({
-		infinite: true,
-		dots: true,
-		arrows: false,
-		autoplay: true,
-		autoplaySpeed: 5000,
-	});
+	// $('.main-slider').slick({
+	// 	infinite: true,
+	// 	dots: true,
+	// 	arrows: false,
+	// 	autoplay: true,
+	// 	autoplaySpeed: 5000,
+	// });
 
 	// plays('sourcevideo','outputcanvas');
 	// plays('sourcevideo2','outputcanvas2');
 
-	let ani = lottie.loadAnimation({
-		container: document.getElementById('lottie'),
-		renderer: 'svg',
-		loop: true,
-		autoplay: false,
-		// path: 'https://assets3.lottiefiles.com/packages/lf20_0uqjzch2.json'
-		path: '/images/slider/data_2.json'
-	});
-	let ani2 = lottie.loadAnimation({
-		container: document.getElementById('lottie2'),
-		renderer: 'svg',
-		loop: true,
-		autoplay: false,
-		// path: 'https://assets5.lottiefiles.com/packages/lf20_e6pyivz1.json'
-		path: '/images/slider/data_3.json'
-	});
-	// ani.setDirection(-1)
-	// ani2.setDirection(-1)
-
-	$('.main-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-
-		// ani.goToAndPlay(1, true)
-		// ani.goToAndStop(5, true)
-		currentSlide === 0 ? ani2.play() : ani2.stop();
-		currentSlide === 1 ? ani.play() : ani.stop();
-
-		// currentSlide === 0 ? ani2.play() : ani2.stop();
-		// currentSlide === 1 ? move() : ani.stop();
-
-		// document.querySelector('#sourcevideo').played()
-	});
+	// let ani = lottie.loadAnimation({
+	// 	container: document.getElementById('lottie'),
+	// 	renderer: 'svg',
+	// 	loop: true,
+	// 	autoplay: false,
+	// 	// path: 'https://assets3.lottiefiles.com/packages/lf20_0uqjzch2.json'
+	// 	path: '/images/slider/data_2.json'
+	// });
+	// let ani2 = lottie.loadAnimation({
+	// 	container: document.getElementById('lottie2'),
+	// 	renderer: 'svg',
+	// 	loop: true,
+	// 	autoplay: false,
+	// 	// path: 'https://assets5.lottiefiles.com/packages/lf20_e6pyivz1.json'
+	// 	path: '/images/slider/data_3.json'
+	// });
+	// // ani.setDirection(-1)
+	// // ani2.setDirection(-1)
+	//
+	// $('.main-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+	//
+	// 	// ani.goToAndPlay(1, true)
+	// 	// ani.goToAndStop(5, true)
+	// 	currentSlide === 0 ? ani2.play() : ani2.stop();
+	// 	currentSlide === 1 ? ani.play() : ani.stop();
+	//
+	// 	// currentSlide === 0 ? ani2.play() : ani2.stop();
+	// 	// currentSlide === 1 ? move() : ani.stop();
+	//
+	// 	// document.querySelector('#sourcevideo').played()
+	// });
 
 	function navToggle(e) {
 		if (e === true) $('#sidebar').addClass('active')
@@ -276,32 +276,32 @@
 			groups3.css('transform',`matrix(1, 0, 0, 1, ${val}, 0)`)
 		}
 	}
-	plays('sourcevideo','outputcanvas');
-	plays('sourcevideo2','outputcanvas2');
-	window.addEventListener('resize', () =>{
-		// lottie.resize();
-		if (winW < 992) {
-			ani.play();
-		}
-		else {
-			ani2.stop();
-			// plays('sourcevideo','outputcanvas');
-			// plays('sourcevideo2','outputcanvas2');
-		}
-	})
+	// plays('sourcevideo','outputcanvas');
+	// plays('sourcevideo2','outputcanvas2');
+	// window.addEventListener('resize', () =>{
+	// 	// lottie.resize();
+	// 	if (winW < 992) {
+	// 		ani.play();
+	// 	}
+	// 	else {
+	// 		ani2.stop();
+	// 		// plays('sourcevideo','outputcanvas');
+	// 		// plays('sourcevideo2','outputcanvas2');
+	// 	}
+	// })
 	window.addEventListener("load", () => {
-		document.body.classList.remove('before-load');
+		// document.body.classList.remove('before-load');
 		// move();
 		winW = window.innerWidth;
 
-		if (winW < 992) {
-			ani.play();
-		}
-		else {
-			ani2.stop();
-			// plays('sourcevideo','outputcanvas');
-			// plays('sourcevideo2','outputcanvas2');
-		}
+		// if (winW < 992) {
+		// 	ani.play();
+		// }
+		// else {
+		// 	ani2.stop();
+		// 	// plays('sourcevideo','outputcanvas');
+		// 	// plays('sourcevideo2','outputcanvas2');
+		// }
 
 		utillityimgPos1 = $('#utillityimgPos1').offset().top;
 		utillityimgPos2 = $('#utillityimgPos2').offset().top;
