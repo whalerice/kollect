@@ -290,7 +290,7 @@
 	// 	}
 	// })
 	window.addEventListener("load", () => {
-		// document.body.classList.remove('before-load');
+		document.body.classList.remove('before-load');
 		// move();
 		winW = window.innerWidth;
 
