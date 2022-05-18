@@ -1554,3 +1554,16 @@ body {
 //		max-height: 100vh;
 //	}
 //}
+
+@media (max-width: 413px) and (max-height: 700px) {
+	.main {
+		.text-group {
+			color: red;
+		}
+	}
+	.video-box {
+		video {
+			top: -20rem;
+		}
+	}
+}
