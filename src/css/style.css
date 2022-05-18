@@ -1132,6 +1132,8 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
+  background: -o-linear-gradient(43.77deg, #0035FF 45.81%, #00E0FF 85.52%);
+  background: linear-gradient(46.23deg, #0035FF 45.81%, #00E0FF 85.52%);
 }
 
 .video-box video {

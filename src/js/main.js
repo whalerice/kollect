@@ -5,97 +5,7 @@
 	let utillityimgPos1;
 	let utillityimgPos2;
 	let utillityimgPos3;
-
-	// function move() {
-	// 	let i = 0;
-	// 	if (i == 0) {
-	// 		i = 1;
-	// 		let elem = document.querySelector('#main-line');
-	// 		let width = 1;
-	// 		let id = setInterval(frame, 10);
-	// 		function frame() {
-	// 			if (width >= 100) {
-	// 				clearInterval(id);
-	// 				i = 0;
-	// 				// ani.playSegments([0, 24]);
-	// 				ani.play();
-	// 				ani.playSegments([30,100]);
-	// 			} else {
-	// 				width++;
-	// 				elem.style.width = width + "%";
-	// 			}
-	// 		}
-	// 	}
-	// }
-
-	// function plays (video,canvas) {
-	// 	const sourcevideo = document.getElementById(video);
-	// 	const outputcanvas = document.getElementById(canvas);
-	// 	const canvasctx = outputcanvas.getContext("2d");
-	//
-	// 	function initCanvas() {
-	// 		outputcanvas.width = sourcevideo.videoWidth;
-	// 		outputcanvas.height = sourcevideo.videoHeight;
-	// 		drawVideo();
-	// 	}
-	//
-	// 	function drawVideo() {
-	// 		canvasctx.drawImage(
-	// 			sourcevideo,
-	// 			0,
-	// 			0,
-	// 			outputcanvas.width,
-	// 			outputcanvas.height
-	// 		);
-	// 		requestAnimationFrame(drawVideo);
-	// 	}
-	//
-	// 	sourcevideo.addEventListener("loadeddata", initCanvas);
-	// }
-
-
-	// $('.main-slider').slick({
-	// 	infinite: true,
-	// 	dots: true,
-	// 	arrows: false,
-	// 	autoplay: true,
-	// 	autoplaySpeed: 5000,
-	// });
-
-	// plays('sourcevideo','outputcanvas');
-	// plays('sourcevideo2','outputcanvas2');
-
-	// let ani = lottie.loadAnimation({
-	// 	container: document.getElementById('lottie'),
-	// 	renderer: 'svg',
-	// 	loop: true,
-	// 	autoplay: false,
-	// 	// path: 'https://assets3.lottiefiles.com/packages/lf20_0uqjzch2.json'
-	// 	path: '/images/slider/data_2.json'
-	// });
-	// let ani2 = lottie.loadAnimation({
-	// 	container: document.getElementById('lottie2'),
-	// 	renderer: 'svg',
-	// 	loop: true,
-	// 	autoplay: false,
-	// 	// path: 'https://assets5.lottiefiles.com/packages/lf20_e6pyivz1.json'
-	// 	path: '/images/slider/data_3.json'
-	// });
-	// // ani.setDirection(-1)
-	// // ani2.setDirection(-1)
-	//
-	// $('.main-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-	//
-	// 	// ani.goToAndPlay(1, true)
-	// 	// ani.goToAndStop(5, true)
-	// 	currentSlide === 0 ? ani2.play() : ani2.stop();
-	// 	currentSlide === 1 ? ani.play() : ani.stop();
-	//
-	// 	// currentSlide === 0 ? ani2.play() : ani2.stop();
-	// 	// currentSlide === 1 ? move() : ani.stop();
-	//
-	// 	// document.querySelector('#sourcevideo').played()
-	// });
+	const sideNavLink = $('.side-nav-link');
 
 	function navToggle(e) {
 		if (e === true) $('#sidebar').addClass('active')
@@ -110,30 +20,14 @@
 			goTop.classList.remove('on')
 		}
 	}
-	const sideNavLink = $('.side-nav-link');
 
-	goTop.addEventListener('click', () => {
-		sideNavLink.removeClass('active');
-		window.scroll({
-			behavior: "smooth",
-			left:0,
-			top:0
-		})
-	})
 
-	$('.btn-menu').click( function() {
-		navToggle(true)
-	} );
-	$('.btn-close').click( function() {
-		navToggle(false)
-	});
 
 	for (let i = 0; sideNavLink.length > i; i++) {
 		sideNavLink.eq(i).click(function(e) {
 			navToggle(false);
 			sideNavLink.removeClass('active');
 			$(e.currentTarget).addClass('active')
-			// $('.side-nav-link').eq(i).addClass('active')
 		})
 	}
 	const teamItem = document.querySelectorAll('.team-item');
@@ -177,17 +71,13 @@
 
 	function calcValues(values, currentYOffset) {
 		let rv;
-		// 현재 씬(스크롤섹션)에서 스크롤된 범위를 비율로 구하기
 		const scrollHeight = cardsBoxPc.height();
 		const scrollRatio = yOffset / scrollHeight;
 
 		if (values.length === 3) {
-			// start ~ end 사이에 애니메이션 실행
 			const partScrollStart = values[2].start * scrollHeight;
 			const partScrollEnd = values[2].end * scrollHeight;
 			const partScrollHeight = partScrollEnd - partScrollStart;
-
-
 
 			if (currentYOffset >= partScrollStart && currentYOffset <= partScrollEnd) {
 				rv = ((currentYOffset - partScrollStart) / partScrollHeight) * (values[1] - values[0]) + values[0];
@@ -203,7 +93,6 @@
 		return rv;
 	}
 
-	// const cards-box-pc
 	const cardsBoxPc = $('.cards-box-pc');
 	const nftSymbol = $('#nftSymbol');
 	const groups1 = $('#groups1');
@@ -276,8 +165,6 @@
 			groups3.css('transform',`matrix(1, 0, 0, 1, ${val}, 0)`)
 		}
 	}
-	// plays('sourcevideo','outputcanvas');
-	// plays('sourcevideo2','outputcanvas2');
 
 	function winRatio() {
 		let x = 21;
@@ -290,6 +177,22 @@
 		}
 	}
 
+	goTop.addEventListener('click', () => {
+		sideNavLink.removeClass('active');
+		window.scroll({
+			behavior: "smooth",
+			left:0,
+			top:0
+		})
+	})
+
+	$('.btn-menu').click( function() {
+		navToggle(true)
+	} );
+	$('.btn-close').click( function() {
+		navToggle(false)
+	});
+
 	window.addEventListener('resize', () =>{
 		winRatio()
 	})
@@ -297,19 +200,9 @@
 	window.addEventListener("load", () => {
 		document.body.classList.remove('before-load');
 		scrollTo(0,0)
-		// move();
 		winW = window.innerWidth;
 
 		winRatio();
-
-		// if (winW < 992) {
-		// 	ani.play();
-		// }
-		// else {
-		// 	ani2.stop();
-		// 	// plays('sourcevideo','outputcanvas');
-		// 	// plays('sourcevideo2','outputcanvas2');
-		// }
 
 		utillityimgPos1 = $('#utillityimgPos1').offset().top;
 		utillityimgPos2 = $('#utillityimgPos2').offset().top;
@@ -371,7 +264,6 @@
 				$('.utillity .img-2').removeClass('on');
 				$('.utillity .ico-round').removeClass('on');
 			}
-			//currentYOffset / scrollHeight
 			cardEvent();
 		}
 	});
