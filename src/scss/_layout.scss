@@ -83,6 +83,13 @@ body {
 		color: #f2f2f2;
 	}
 }
+.wide {
+	video {
+		height: auto !important;
+		width: 100% !important;
+		margin-top: -6% !important;
+	}
+}
 
 .container {
 	max-width: 144rem;
@@ -1516,13 +1523,13 @@ body {
 }
 
 @media (min-width: 1600px) {
-	.video-box {
-		video {
-			width: 100%;
-			height: auto;
-			margin-top: 0;
-		}
-	}
+	//.video-box {
+	//	video {
+	//		width: 100%;
+	//		height: auto;
+	//		margin-top: 0;
+	//	}
+	//}
 	.community {
 		.other-social-list {
 			transform: translate(48rem, -8.5rem);
@@ -1572,7 +1579,7 @@ body {
 	}
 	.video-box {
 		video {
-			top: -20rem;
+			top: -15rem;
 		}
 	}
 }

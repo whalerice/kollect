@@ -278,21 +278,29 @@
 	}
 	// plays('sourcevideo','outputcanvas');
 	// plays('sourcevideo2','outputcanvas2');
-	// window.addEventListener('resize', () =>{
-	// 	// lottie.resize();
-	// 	if (winW < 992) {
-	// 		ani.play();
-	// 	}
-	// 	else {
-	// 		ani2.stop();
-	// 		// plays('sourcevideo','outputcanvas');
-	// 		// plays('sourcevideo2','outputcanvas2');
-	// 	}
-	// })
+
+	function winRatio() {
+		let x = 21;
+		let y = Math.round((window.outerHeight * x) / window.outerWidth);
+		if (x === 21 && y === 9) {
+			document.body.classList.add('wide')
+		}
+		else{
+			document.body.classList.remove('wide')
+		}
+	}
+
+	window.addEventListener('resize', () =>{
+		winRatio()
+	})
+
 	window.addEventListener("load", () => {
 		document.body.classList.remove('before-load');
+		scrollTo(0,0)
 		// move();
 		winW = window.innerWidth;
+
+		winRatio();
 
 		// if (winW < 992) {
 		// 	ani.play();
